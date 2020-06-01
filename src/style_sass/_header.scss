@@ -1,0 +1,167 @@
+$common_width:'1190px';
+
+
+$header_height:'36px';
+@mixin widthAndHeight($width,$height) {
+    width: $width;
+    height: $height;    
+}
+@mixin setMargin($top:0,$right:0,$bottom:0,$left:0) {
+    margin-top: $top;
+    margin-right: $right;;
+    margin-bottom: $bottom;
+    margin-left: $left;    
+}
+@mixin  setPadding($top:0,$right:0,$bottom:0,$left:0) {
+    padding-top: $top;
+    padding-right: $right;;
+    padding-bottom: $bottom;
+    padding-left: $left;  
+}
+
+#header{
+    @include widthAndHeight(100%,36px);    
+    background-color: #F1F1F1;
+    font-size: 12px;
+   .header-wrap{
+       @include widthAndHeight(1190px,36px);
+       display: flex;
+       justify-content: space-between;
+      
+       margin:0 auto;
+       /*------ 左侧menu begin-------*/
+       .header-left{
+           display: flex;
+           justify-content: flex-start;
+           align-items: center;           
+           span{
+               @include setPadding(0,0 ,0 ,5px );
+           }
+           .header_collect{
+               @include setPadding(0,10px,0 ,10px);
+               border-right: 1px solid rgb(158, 154, 154);
+           }
+           /*------顶部左侧 li ------*/
+           .header_target {
+               position: relative;
+               line-height: 36px;
+               height: 36px;
+               @include setMargin(0,10px ,0 ,10px );
+               &:hover{
+                background-color: white;
+                overflow: visible;
+                ul{
+                   display: block;           
+                   margin-top: -1px; 
+                   z-index: 99;                        
+                } 
+                .city{  
+                    height: 40px;
+                    z-index: 555;  
+                }               
+        
+               }
+               .city{                  
+                   height: 36px;
+                   
+               }
+               ul{
+                position: absolute;
+                width: 200px;
+                top: 36px;
+                background-color: white;
+                display: none;
+                // visibility: hidden;
+                border: 1px solid rgb(230, 223, 223);
+                li{
+                    line-height: 28px;
+                    padding-left: 10px;
+                }
+            } 
+              
+              
+           }           
+       }
+        /*------ 左侧menu begin-------*/
+
+
+       /*-------- 右侧的menu  begin------------*/
+       .header-right{
+            display: flex;
+            justify-content: flex-start;
+            align-items: center; 
+            font-size: 12px;
+            em{
+                color:rgb(158, 154, 154);
+            }
+           li{
+               display: flex;
+               align-items: center;
+               height: 36px;
+               line-height: 36px;
+               @include setPadding(0,10px ,0 ,10px);
+               //border-right: 1px solid grey;
+               a{
+                    display: block;                   
+                    line-height: 36px; 
+                    height: 36px;
+                    font-size: 12px;                    
+               }              
+               //登录
+               .active{
+                   color:red;
+                   @include setPadding(0,5px,0,5px); 
+               } 
+               a:not(.active):hover{                    
+                    color: rgb(60, 60, 201);                                          
+                   }                           
+               }
+              
+               //手机APP 
+               .phone_app{
+                position: relative;
+                &:hover{
+                    background-color: white ;
+                    dl{
+                        display: block;
+                        margin-right: -1px;
+                    }
+                }
+                dl{
+                   position: absolute;
+                   display: none;
+                   right: 0;           
+                   top: 36px;     
+                   right: 0;
+                   height: 101px;
+                   width: 205px;  
+                   z-index: 1;  
+                   border: 1px solid rgb(230, 223, 223);  
+                   @include setPadding(0,0 ,0 ,10px );             
+                   dt{
+                       margin-top: 8px;
+                       float: left;
+                       width: 85px;
+                       height: 85px;
+                       img{
+                           width: 100%;
+                           height: 100%;
+                       }
+                   }
+                  dd{
+                      margin-top: 8px;  
+                      @include setMargin(8px,0 ,0 ,10px);
+                      float: left;
+                      .app{
+                          line-height: 30px;
+                      }
+                      .active{
+                          color: red;
+                      }
+                  }
+                }
+            }    
+        /*-------- 右侧的menu  end------------*/
+   }
+   }
+}
