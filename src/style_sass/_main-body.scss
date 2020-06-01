@@ -1,0 +1,29 @@
+#main-body{
+    width: 1190px;
+    margin: 0 auto;
+    .main-left{
+        width: 750px;
+        height: 400px;
+        margin-left: 180px;;
+        background-color: pink;
+        .img-box{
+            width: 750px;
+            height: 400px;
+            position: relative;
+            .btn{
+                position: absolute;
+                bottom: 10px;
+                left: 50%;
+                display: flex;
+                transform: translate(-50%);
+                li{
+                    width: 15px;
+                    height: 15px;
+                    background-color: red;
+                    border-radius: 50%;
+                    margin:0 5px;
+                }
+            }
+        }
+    }
+}

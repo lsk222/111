@@ -1,0 +1,45 @@
+#headerNav{
+    width: 1190px;
+    height: 48px;
+    display: flex;
+    justify-content: start;
+    margin: 0 auto;
+    .allsort{
+        position: relative;
+        width: 166px;
+        height: 48px;
+        padding-left: 14px;
+        background-color: #0B333A;
+        .all{
+            display: block;
+            line-height: 48px;
+            color:white
+        }
+        ul{
+            position: absolute;
+            left: 0;
+            height: 400px;
+            background-color: #2A4449; 
+            li{         
+                a{
+                    width: 166px;
+                    padding-left: 14px;
+                    display: block;
+                    height: 40px;
+                    line-height: 40px;                  
+                    color: white;
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+    .sitenav{
+        height: 46px;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        a{
+            padding: 0 16px 0 16px;
+        }
+    }
+}

@@ -135,7 +135,8 @@ $header_height:'36px';
                    right: 0;
                    height: 101px;
                    width: 205px;  
-                   z-index: 1;  
+                   z-index: 99;
+                   background-color: white;  
                    border: 1px solid rgb(230, 223, 223);  
                    @include setPadding(0,0 ,0 ,10px );             
                    dt{
