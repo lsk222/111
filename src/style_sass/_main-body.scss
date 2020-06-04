@@ -1,6 +1,7 @@
 #main-body{
     width: 1190px;
     margin: 0 auto;
+    display: flex;
     .main-left{
         width: 750px;
         height: 400px;
@@ -10,18 +11,134 @@
             width: 750px;
             height: 400px;
             position: relative;
+            overflow: hidden;
+            .lunbo{
+                position: absolute;
+                cursor: pointer;
+     
+               li{
+                   float: left;
+                   width: 750px;
+                   height: 400px;
+                   img{
+                       width: 100%;
+                       height: 100%;
+                   }
+               }
+
+            }
             .btn{
                 position: absolute;
                 bottom: 10px;
                 left: 50%;
                 display: flex;
                 transform: translate(-50%);
+                .bgacitve{
+                    background-color: red;
+                }
+                .bgacitve{
+                    background-color: red;
+                }
                 li{
                     width: 15px;
                     height: 15px;
-                    background-color: red;
+                    background-color: rgb(75, 69, 69);
                     border-radius: 50%;
                     margin:0 5px;
+                }
+            }
+        }
+    }
+    .main-right{
+        width: 260px;
+        height: 400px;
+        // background-color: pink;
+        padding-left: 15px;
+        display: flex;
+        flex-direction: column;
+        .doc-pop{
+            .consult{
+                .consult-tab{
+                    display: flex;
+                    margin-top: 10px;
+                    :first{
+                        border-bottom: 1px solid red;;
+                    }
+                    span{
+                        cursor: pointer;
+                        display: block;
+                        width: 48px;
+                        height: 28px;
+                        font-size: 12px;
+                        padding-left: 5px;
+                        border-bottom-width: 1px;
+                    }
+                  
+                }
+                .consult-detail{
+                    div{
+                        display: flex;
+                        padding-left: 5px;
+                        flex-wrap: wrap;
+                        a{
+                            font-size: 13px;
+                            width: 72px;
+                            height: 25px;
+                        }
+                    }
+                }
+
+            }
+         
+        }
+        .free-server{
+            width: 233px;
+            height: 50px;
+            img{
+                cursor: pointer;
+                width: 100%;
+                height: 100%;
+            }
+        }
+        .company{
+            padding-top:10px;
+            p{
+                padding: 5px 0;
+                font-size: 14px;
+                font-weight: bolder;
+
+            }
+            a{
+                display: block;
+                width: 44px;
+                height: 44px;
+                float: left;
+                margin-right: 5px;
+                img{
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+        .notice{
+            .notice-tabs{
+                padding-bottom: 10px;
+                span{
+                    font-size: 12px;
+                };
+            }
+            .notice-contents{
+                div{
+                    ul{
+                        li{
+                            line-height: 24px;
+                            display: flex;
+                            a{
+                                font-size: 13px;
+                                width: 100%;
+                            }
+                        }
+                    }
                 }
             }
         }

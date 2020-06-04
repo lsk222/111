@@ -1,0 +1,12 @@
+.active{
+    color: red;
+}
+.clearLeftBorder{
+    border-left: none;
+}
+.clearRightBorder{
+    border-right: none;
+}
+.bgactive{
+    background-color: red;
+}

@@ -228,32 +228,36 @@
   height: 36px;
 }
 
-#headerNav {
+#headerNav-wrap {
+  width: 100%;
+  border-bottom: 2px solid orange;
+}
+#headerNav-wrap #headerNav {
   width: 1190px;
   height: 48px;
   display: flex;
   justify-content: start;
   margin: 0 auto;
 }
-#headerNav .allsort {
+#headerNav-wrap #headerNav .allsort {
   position: relative;
   width: 166px;
   height: 48px;
   padding-left: 14px;
   background-color: #0B333A;
 }
-#headerNav .allsort .all {
+#headerNav-wrap #headerNav .allsort .all {
   display: block;
   line-height: 48px;
   color: white;
 }
-#headerNav .allsort ul {
+#headerNav-wrap #headerNav .allsort ul {
   position: absolute;
   left: 0;
-  height: 400px;
+  height: 402px;
   background-color: #2A4449;
 }
-#headerNav .allsort ul li a {
+#headerNav-wrap #headerNav .allsort ul li a {
   width: 166px;
   padding-left: 14px;
   display: block;
@@ -262,19 +266,20 @@
   color: white;
   font-size: 14px;
 }
-#headerNav .sitenav {
+#headerNav-wrap #headerNav .sitenav {
   height: 46px;
   display: flex;
   justify-content: start;
   align-items: center;
 }
-#headerNav .sitenav a {
+#headerNav-wrap #headerNav .sitenav a {
   padding: 0 16px 0 16px;
 }
 
 #main-body {
   width: 1190px;
   margin: 0 auto;
+  display: flex;
 }
 #main-body .main-left {
   width: 750px;
@@ -286,6 +291,20 @@
   width: 750px;
   height: 400px;
   position: relative;
+  overflow: hidden;
+}
+#main-body .main-left .img-box .lunbo {
+  position: absolute;
+  cursor: pointer;
+}
+#main-body .main-left .img-box .lunbo li {
+  float: left;
+  width: 750px;
+  height: 400px;
+}
+#main-body .main-left .img-box .lunbo li img {
+  width: 100%;
+  height: 100%;
 }
 #main-body .main-left .img-box .btn {
   position: absolute;
@@ -294,12 +313,209 @@
   display: flex;
   transform: translate(-50%);
 }
+#main-body .main-left .img-box .btn .bgacitve {
+  background-color: red;
+}
+#main-body .main-left .img-box .btn .bgacitve {
+  background-color: red;
+}
 #main-body .main-left .img-box .btn li {
   width: 15px;
   height: 15px;
-  background-color: red;
+  background-color: #4b4545;
   border-radius: 50%;
   margin: 0 5px;
+}
+#main-body .main-right {
+  width: 260px;
+  height: 400px;
+  padding-left: 15px;
+  display: flex;
+  flex-direction: column;
+}
+#main-body .main-right .doc-pop .consult .consult-tab {
+  display: flex;
+  margin-top: 10px;
+}
+#main-body .main-right .doc-pop .consult .consult-tab :first {
+  border-bottom: 1px solid red;
+}
+#main-body .main-right .doc-pop .consult .consult-tab span {
+  cursor: pointer;
+  display: block;
+  width: 48px;
+  height: 28px;
+  font-size: 12px;
+  padding-left: 5px;
+  border-bottom-width: 1px;
+}
+#main-body .main-right .doc-pop .consult .consult-detail div {
+  display: flex;
+  padding-left: 5px;
+  flex-wrap: wrap;
+}
+#main-body .main-right .doc-pop .consult .consult-detail div a {
+  font-size: 13px;
+  width: 72px;
+  height: 25px;
+}
+#main-body .main-right .free-server {
+  width: 233px;
+  height: 50px;
+}
+#main-body .main-right .free-server img {
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+}
+#main-body .main-right .company {
+  padding-top: 10px;
+}
+#main-body .main-right .company p {
+  padding: 5px 0;
+  font-size: 14px;
+  font-weight: bolder;
+}
+#main-body .main-right .company a {
+  display: block;
+  width: 44px;
+  height: 44px;
+  float: left;
+  margin-right: 5px;
+}
+#main-body .main-right .company a img {
+  width: 100%;
+  height: 100%;
+}
+#main-body .main-right .notice .notice-tabs {
+  padding-bottom: 10px;
+}
+#main-body .main-right .notice .notice-tabs span {
+  font-size: 12px;
+}
+#main-body .main-right .notice .notice-contents div ul li {
+  line-height: 24px;
+  display: flex;
+}
+#main-body .main-right .notice .notice-contents div ul li a {
+  font-size: 13px;
+  width: 100%;
+}
+
+#right-bar {
+  position: fixed;
+  right: 28px;
+  bottom: 10px;
+  z-index: 100;
+  width: 52px;
+  height: 256px;
+  background-color: blue;
+  z-index: 10;
+}
+#right-bar .docpic {
+  width: 52px;
+  height: 55px;
+}
+#right-bar .docpic img {
+  width: 100%;
+  height: 100%;
+}
+
+#limit-shopping {
+  width: 1190px;
+  height: 150px;
+  margin: 10px auto;
+  background-color: pink;
+  display: flex;
+}
+#limit-shopping .clock-wrap {
+  width: 180px;
+  height: 150px;
+  background-color: green;
+}
+#limit-shopping .medList {
+  display: flex;
+}
+#limit-shopping .medList a {
+  display: block;
+}
+
+#drug-List {
+  width: 1190px;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+#drug-List .drug1 {
+  margin: 5px 0 15px 0;
+  width: 100%;
+  height: 485px;
+  display: flex;
+  border-bottom: 1px solid orange;
+}
+#drug-List .drug1 .drug1-list .listHeader {
+  background-color: #7EC6FF;
+  width: 180px;
+  height: 85px;
+  font-size: 20px;
+  text-align: center;
+  line-height: 85px;
+}
+#drug-List .drug1 .drug1-list ul {
+  width: 180px;
+  display: flex;
+  flex-wrap: wrap;
+}
+#drug-List .drug1 .drug1-list ul li {
+  width: 89px;
+  height: 49px;
+  line-height: 50px;
+  text-align: center;
+}
+#drug-List .drug1 .drug1-list ul li a:hover {
+  color: red;
+}
+#drug-List .drug1 .drug1-detail {
+  display: flex;
+  flex-wrap: wrap;
+}
+#drug-List .drug1 .drug1-detail .detail-L {
+  width: 600px;
+  height: 284px;
+}
+#drug-List .drug1 .drug1-detail .detail-L img {
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+}
+#drug-List .drug1 .drug1-detail .detail-R {
+  cursor: pointer;
+  width: 404px;
+  height: 284px;
+  display: flex;
+}
+#drug-List .drug1 .drug1-detail .detail-R img {
+  width: 50%;
+  height: 100%;
+}
+#drug-List .drug1 .drug1-detail .detail-B {
+  display: flex;
+}
+#drug-List .drug1 .drug1-detail .detail-B dl {
+  width: 160px;
+  height: 170px;
+  padding: 20px 20px 10px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+#drug-List .drug1 .drug1-detail .detail-B dl dt {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#drug-List .drug1 .drug1-detail .detail-B dl dd p {
+  margin: 15px 0 15px;
 }
 
 /*# sourceMappingURL=index.css.map */
