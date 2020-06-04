@@ -34,6 +34,12 @@
   padding-left: 10px;
   border-right: 1px solid #9e9a9a;
 }
+#header .header-wrap .header-left .header_collect span {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  background: url("../img/common_sprite.png") no-repeat right -65px;
+}
 #header .header-wrap .header-left .header_target {
   position: relative;
   line-height: 36px;
@@ -109,6 +115,13 @@
 }
 #header .header-wrap .header-right .phone_app {
   position: relative;
+}
+#header .header-wrap .header-right .phone_app span {
+  display: block;
+  width: 12px;
+  height: 14px;
+  background: url("../img/common_sprite.png") no-repeat right -112px;
+  margin-right: 2px;
 }
 #header .header-wrap .header-right .phone_app:hover {
   background-color: white;
@@ -195,11 +208,16 @@
 }
 #search .mod_search .searchBtn {
   height: 46px;
-  width: 82;
+  width: 82px;
   border: 1px solid #c7a774;
   cursor: pointer;
   background-color: #fff;
   margin-left: -1px;
+}
+#search .mod_search .searchBtn img {
+  width: 20px;
+  height: 20px;
+  margin: 0 auto;
 }
 #search .mod_search .hotkeys a {
   font-size: 12px;
@@ -222,6 +240,21 @@
   text-align: center;
   line-height: 36px;
   margin-right: 10px;
+  display: flex;
+}
+#search .mod_cart .cart {
+  background-color: red;
+  width: 36px;
+  height: 38px;
+  margin-left: 16px;
+  background: url("../img/common_sprite.png") -4px -312px;
+}
+#search .mod_cart .r-arrow {
+  background-color: red;
+  width: 36px;
+  height: 38px;
+  margin-right: 16px;
+  background: url("../img/common_sprite.png") right -312px;
 }
 #search .mod_cart a {
   display: block;
@@ -408,9 +441,28 @@
   bottom: 10px;
   z-index: 100;
   width: 52px;
-  height: 256px;
-  background-color: blue;
+  height: 310px;
   z-index: 10;
+}
+#right-bar a {
+  display: block;
+  width: 52px;
+  height: 52px;
+}
+#right-bar .consult {
+  background: url("../img/common_sprite.png") no-repeat 0 -626px;
+}
+#right-bar .list {
+  background: url("../img/common_sprite.png") no-repeat 0 -678px;
+}
+#right-bar .shoppingCart {
+  background: url("../img/common_sprite.png") no-repeat -52px -725px;
+}
+#right-bar .feedback {
+  background: url("../img/common_sprite.png") no-repeat 0 -780px;
+}
+#right-bar .backTop {
+  background: url("../img/common_sprite.png") no-repeat 0 -836px;
 }
 #right-bar .docpic {
   width: 52px;
@@ -516,6 +568,312 @@
 }
 #drug-List .drug1 .drug1-detail .detail-B dl dd p {
   margin: 15px 0 15px;
+}
+
+#ask-sick {
+  width: 1190px;
+  display: flex;
+  margin: 0 auto;
+}
+#ask-sick .ask-left {
+  width: 930px;
+}
+#ask-sick .ask-left .sick-top, #ask-sick .ask-left .sick-bottom {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 15px;
+}
+#ask-sick .ask-left .sick-top .tab-header, #ask-sick .ask-left .sick-bottom .tab-header {
+  width: 184px;
+  height: 60px;
+  background-color: #92C4FF;
+  font-size: 24px;
+  line-height: 60px;
+  text-align: center;
+  color: white;
+}
+#ask-sick .ask-left .sick-top .sicks, #ask-sick .ask-left .sick-bottom .sicks, #ask-sick .ask-left .sick-bottom .partments {
+  flex: 1;
+  justify-content: space-around;
+  background-color: #F3F3F3;
+  display: flex;
+}
+#ask-sick .ask-left .sick-top .sicks li, #ask-sick .ask-left .sick-bottom .sicks li, #ask-sick .ask-left .sick-bottom .partments li {
+  font-size: 14px;
+  width: 93px;
+  height: 58px;
+  line-height: 58px;
+  text-align: center;
+}
+#ask-sick .ask-left .sick-top .sicks li:hover, #ask-sick .ask-left .sick-bottom .sicks li:hover, #ask-sick .ask-left .sick-bottom .partments li:hover {
+  background-color: wheat;
+}
+#ask-sick .ask-left .sick-top .header-list ul, #ask-sick .ask-left .sick-bottom .header-list ul, #ask-sick .ask-left .sick-bottom .bottom-list ul {
+  background-color: white;
+  display: flex;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  justify-content: space-between;
+}
+#ask-sick .ask-left .sick-top .header-list ul li, #ask-sick .ask-left .sick-bottom .header-list ul li, #ask-sick .ask-left .sick-bottom .bottom-list ul li {
+  width: 435px;
+  padding: 20px 20px 20px 10px;
+  line-height: 38px;
+  height: 38px;
+  display: flex;
+  border-bottom: 1px solid gray;
+  justify-content: space-between;
+}
+#ask-sick .ask-left .sick-top .header-list ul li a, #ask-sick .ask-left .sick-bottom .header-list ul li a, #ask-sick .ask-left .sick-bottom .bottom-list ul li a {
+  font-weight: bolder;
+  font-size: 16px;
+}
+#ask-sick .ask-left .sick-bottom .tab-header {
+  background-color: #CBC3F2;
+}
+#ask-sick .hot .hot-sick, #ask-sick .hot .hot-msg {
+  margin-left: 15px;
+}
+#ask-sick .hot h3 {
+  padding-left: 10px;
+  width: 120px;
+  display: flex;
+}
+#ask-sick .hot h3 p {
+  padding: 10px 5px;
+  border-bottom: 1px solid red;
+  font-size: 16px;
+}
+#ask-sick .hot h3 img {
+  width: 35px;
+  height: 16px;
+  align-self: center;
+}
+#ask-sick .hot .disease-names {
+  width: 225px;
+  height: 420px;
+  display: flex;
+  margin-top: 15px;
+  background-color: #F3F3F3;
+  padding: 10px 5px 10px 10px;
+  flex-wrap: wrap;
+}
+#ask-sick .hot .disease-names a {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: block;
+  width: 65px;
+  font-size: 12px;
+  margin-right: 5px;
+}
+#ask-sick .hot .disease-names a:hover {
+  color: red;
+}
+#ask-sick .hot .hot-msg {
+  margin-top: 20px;
+}
+#ask-sick .hot .hot-msg h3 {
+  width: 150px;
+}
+#ask-sick .hot .hot-msg a {
+  height: 36px;
+  width: 220px;
+  display: block;
+  line-height: 36px;
+}
+
+#friendLink-wrap {
+  border: 1px solid #afabab;
+  width: 1190px;
+  margin: 0 auto;
+}
+#friendLink-wrap .links-show {
+  margin-top: 15px;
+  width: 1190px;
+  width: 100%;
+}
+#friendLink-wrap .links-show img {
+  width: 100%;
+}
+#friendLink-wrap .links-tab {
+  background-color: #cac2c2;
+  border-bottom: 1px solid #E6E6E6;
+  height: 34px;
+  line-height: 34px;
+}
+#friendLink-wrap .links-tab span {
+  display: block;
+  width: 180px;
+  height: 33px;
+  float: left;
+  text-align: center;
+}
+#friendLink-wrap .links-tab span:hover {
+  background-color: white;
+}
+
+#ft-commit {
+  padding-top: 62px;
+  width: 1190px;
+  margin: 0 auto;
+}
+#ft-commit .app-list {
+  margin-left: 100px;
+  margin-top: 60px;
+  display: flex;
+  margin-bottom: 65px;
+}
+#ft-commit .app-list dl {
+  display: flex;
+  width: 255px;
+}
+#ft-commit .app-list dl p {
+  font-size: 12px;
+}
+#ft-commit .app-list dt {
+  width: 94px;
+  height: 94px;
+}
+#ft-commit .app-list dt img {
+  width: 100%;
+  height: 100%;
+}
+#ft-commit .app-list dd {
+  height: 94px;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  margin-left: 12px;
+}
+#ft-commit .app-list dd h4 {
+  margin-bottom: 15px;
+}
+#ft-commit .app-list .concat {
+  width: 250px;
+  height: 58px;
+  padding: 15px 0;
+  border-left: 1px solid #ada4a4;
+}
+#ft-commit .app-list .concat p {
+  text-align: center;
+}
+#ft-commit .app-list .concat .tel {
+  font-size: 20px;
+  color: #c7a774;
+  font-weight: 700;
+}
+#ft-commit .app-list .concat .time {
+  padding: 10px 0;
+}
+
+#page-footer {
+  width: 1190px;
+  margin: 0 auto;
+  padding-top: 65px;
+  background-color: #cfc8c8;
+}
+#page-footer .bottom_unit {
+  position: relative;
+  padding-left: 215px;
+  padding-top: 15px;
+}
+#page-footer .bottom_unit .help_part {
+  display: flex;
+  height: 100%;
+  border-bottom: 1px solid #cfc8c8;
+  padding-bottom: 25px;
+}
+#page-footer .bottom_unit .help_part dl {
+  display: flex;
+  flex-direction: column;
+  width: 155px;
+}
+#page-footer .bottom_unit .help_part dl dt {
+  font-weight: bold;
+  color: #1c1c1c;
+  font-size: 15px;
+  padding-bottom: 10px;
+}
+#page-footer .bottom_unit .help_part dl dd {
+  line-height: 24px;
+  font-size: 12px;
+}
+#page-footer .bottom_unit img {
+  position: absolute;
+  left: 0;
+  top: 30px;
+}
+#page-footer .bottom_links {
+  display: flex;
+  padding-top: 25px;
+}
+#page-footer .bottom_links .copy_right .yyw_member {
+  display: flex;
+  height: 56px;
+  margin-bottom: 30px;
+  margin-left: 100px;
+}
+#page-footer .bottom_links .copy_right .yyw_member span {
+  line-height: 56px;
+  font-size: 12px;
+}
+#page-footer .bottom_links .copy_right .yyw_member ul {
+  display: flex;
+}
+#page-footer .bottom_links .copy_right .yyw_member ul li {
+  line-height: 56px;
+  justify-content: center;
+  display: flex;
+  width: 270px;
+}
+#page-footer .bottom_links .copy_right .yyw_member ul li span {
+  font-weight: bold;
+  padding-left: 5px;
+}
+#page-footer .bottom_links .copy_right .yyw_member ul img {
+  width: 56px;
+  height: 56px;
+}
+#page-footer .bottom_links .copy_right .bottom_link {
+  margin-left: 80px;
+  color: #666;
+}
+#page-footer .bottom_links .copy_right .bottom_link .jituan_logo {
+  width: 105px;
+  height: 100px;
+}
+#page-footer .bottom_links .copy_right .bottom_link .jituan_logo img {
+  margin-top: 10px;
+  width: 100%;
+  height: 100%;
+}
+#page-footer .bottom_links .copy_right .bottom_link a {
+  margin: 0 20px;
+  color: #666;
+  font-size: 12px;
+  line-height: 24px;
+}
+#page-footer .bottom_links .copy_right .copy_info {
+  padding-top: 15px;
+  margin-left: 100px;
+}
+#page-footer .bottom_links .copy_right .copy_info p {
+  font-size: 12px;
+  line-height: 20px;
+  color: #918a8a;
+}
+#page-footer .bottom_links .sf .outImg-wrap {
+  margin-left: 90px;
+  margin-top: 5px;
+  width: 975px;
+  padding: 10px 0 0 10px;
+}
+#page-footer .bottom_links .sf .outImg-wrap img {
+  width: 100%;
+  height: 100%;
+  opacity: .5;
 }
 
 /*# sourceMappingURL=index.css.map */

@@ -1,0 +1,92 @@
+#friendLink-wrap{
+    border: 1px solid rgb(175, 171, 171);
+    width: 1190px;
+    margin: 0 auto;
+    .links-show{
+        margin-top: 15px;
+        width: 1190px;
+        width: 100%;
+        img{
+            width: 100%;
+        }
+    }
+    .links-tab{
+        background-color: rgb(202, 194, 194);
+         border-bottom: 1px solid #E6E6E6;
+        height: 34px;
+        line-height: 34px;
+        span{
+              display: block;
+               width: 180px;
+               height: 33px;
+               float: left;
+               text-align: center;
+           &:hover{
+               
+               background-color: white;
+           }
+        }
+       
+    }
+}
+#ft-commit{
+    padding-top: 62px;
+    width: 1190px;
+    margin: 0 auto;
+    // display: flex;
+    // justify-content: center;
+    .app-list{
+        margin-left: 100px;
+        margin-top: 60px;
+        display: flex;
+        margin-bottom: 65px;
+        dl{
+            display: flex;
+            width: 255px;
+            p{
+                font-size: 12px;
+            }
+        }
+        dt{
+            width: 94px;
+            height: 94px;
+            img{
+                width: 100%;
+                height: 100%;
+            }
+        }
+        dd{
+            h4{
+                margin-bottom: 15px;
+            }
+            height: 94px;
+            display: flex;
+            flex-direction: column;
+            align-content: center;
+            justify-content: center;
+            margin-left: 12px;
+        } 
+        .concat{
+            width: 250px;
+            height: 58px;
+            padding: 15px 0;
+                        
+            border-left: 1px solid rgb(173, 164, 164);
+            p{
+                text-align: center;
+               
+            }
+            .tel{
+                font-size: 20px;
+                color: #c7a774;
+                font-weight: 700;
+                 
+            }
+            .time{
+                padding:10px 0;
+            }
+            
+        }
+       
+    }
+}

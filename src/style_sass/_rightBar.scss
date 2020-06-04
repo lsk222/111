@@ -4,9 +4,34 @@
     bottom: 10px;
     z-index: 100;
     width: 52px;
-    height: 256px;
-    background-color: blue ;
+    height: 310px;
+    
     z-index: 10;
+    a{
+        display: block;
+        width: 52px;
+        height: 52px;
+
+    }
+    .consult{
+        background: url('../img/common_sprite.png') no-repeat 0 -626px;
+    }
+    .list{
+        background: url('../img/common_sprite.png') no-repeat 0 -678px;
+
+    }
+    .shoppingCart{
+        background: url('../img/common_sprite.png') no-repeat -52px -725px;
+
+    }
+    .feedback{
+        background: url('../img/common_sprite.png') no-repeat 0 -780px;
+
+    }
+    .backTop{
+        background: url('../img/common_sprite.png') no-repeat 0 -836px;
+
+    }
     .docpic{
         width: 52px;
         height: 55px;

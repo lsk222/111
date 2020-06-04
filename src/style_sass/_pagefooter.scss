@@ -1,0 +1,127 @@
+#page-footer{
+    width: 1190px;
+    margin: 0 auto;
+    padding-top: 65px;
+    background-color: #cfc8c8;
+    .bottom_unit{       
+        position: relative;
+        padding-left: 215px;
+        padding-top: 15px;
+        .help_part{
+            display: flex;
+            height: 100%;
+            border-bottom: 1px solid #cfc8c8;
+            padding-bottom: 25px;
+            
+            dl{
+                display: flex;
+                flex-direction: column;
+                width: 155px;
+                dt{
+                    font-weight: bold;
+                    color: #1c1c1c;
+                    font-size: 15px;
+                    padding-bottom: 10px;
+                }
+                dd{
+                    line-height: 24px;
+                    font-size: 12px;
+                }
+            }
+        }
+        img{
+            position: absolute;
+            left: 0;
+            top: 30px;
+                }
+    }
+    .bottom_links{
+       display: flex;
+       padding-top: 25px;
+      .copy_right{
+        
+        .yyw_member{
+            display: flex;
+            height: 56px;
+            margin-bottom: 30px;
+            margin-left:100px;
+            span{
+                line-height: 56px;
+                font-size: 12px;
+            }
+            ul{
+                display: flex;
+                li{
+                    line-height: 56px;
+                    justify-content: center;
+                    display: flex;
+                    width: 270px;
+                    span{
+                        font-weight: bold;;
+                        padding-left: 5px;
+                    }
+                }
+               
+                img{
+                    width: 56px;
+                    height: 56px;
+
+                }
+            }
+         }
+       //    讨厌的链接
+        .bottom_link{
+           
+            margin-left:80px;
+            color: #666;
+            .jituan_logo{
+                
+                width: 105px;
+                height: 100px;
+                img{
+                    margin-top: 10px;
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+            a {
+                margin: 0 20px;
+                color: #666;
+                font-size: 12px;
+                line-height: 24px;
+            }
+        }
+        //copyinfo
+        .copy_info{
+            padding-top: 15px;
+            margin-left: 100px;
+            p{
+                font-size: 12px;
+                line-height: 20px;
+                color:rgb(145, 138, 138);
+            }
+        }
+            //sf_verify
+      
+    
+      }
+      .sf{
+       
+        .outImg-wrap{
+            margin-left: 90px;
+            margin-top:5px;
+            width: 975px;
+            padding: 10px 0 0 10px;
+            img{
+              width: 100%;
+              height: 100%;
+              opacity: .5;
+          }
+        }
+
+    
+  }
+     
+      
+    }
+}

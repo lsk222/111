@@ -1,0 +1,132 @@
+#ask-sick{
+    width: 1190px;
+    display: flex;
+
+    margin: 0 auto;
+    // 左边 常见病和科室
+    .ask-left{
+        width: 930px;
+        .sick-top{
+            display: flex;
+            flex-wrap: wrap;
+            margin-bottom: 15px;
+            .tab-header{
+                width: 184px;
+                height: 60px;
+                background-color: #92C4FF;
+                font-size: 24px;
+                line-height: 60px;
+                text-align: center;
+                color: white;
+            }
+            .sicks{
+                flex: 1;
+                justify-content: space-around;
+                background-color:#F3F3F3;
+                display: flex;
+                li{
+                    &:hover{
+                        background-color: wheat;
+                    }
+                    
+                    font-size: 14px;
+                    width: 93px;
+                    height: 58px;
+                    line-height: 58px;
+                    text-align: center;
+                }
+            }
+            .header-list{
+                ul{
+                    background-color: white;
+                    display: flex;
+                    flex-wrap: wrap;
+                    box-sizing: border-box;
+                    
+                    justify-content: space-between;
+                    li{
+                        width: 435px;
+                        padding: 20px 20px 20px 10px;
+                        line-height: 38px;
+                        height: 38px;
+                        display: flex;
+                        border-bottom: 1px solid gray;
+                        justify-content: space-between;
+                        a{
+                            font-weight: bolder;
+                            font-size: 16px;
+                        }
+                    }
+                }
+            }
+        }
+        .sick-bottom{
+           @extend .sick-top;
+           .tab-header{
+               background-color: #CBC3F2;
+           }
+           .bottom-list{
+               @extend .header-list;
+           }
+           .partments{
+               @extend .sicks;
+           }
+        }
+    }
+    
+    //右边 热门疾病和热点资讯
+    .hot{
+        .hot-sick{
+            margin-left: 15px;
+        }
+        h3{
+            padding-left: 10px;
+            width: 120px;
+            display: flex;            
+            p{
+                padding: 10px 5px;
+                border-bottom: 1px solid red;
+                font-size: 16px;
+            }
+            img{
+                width: 35px;
+                height: 16px;
+                align-self: center;
+            }
+        }
+        .disease-names{
+            width: 225px;
+            height: 420px;
+            display: flex;
+            margin-top: 15px;
+            background-color: #F3F3F3;
+            padding: 10px 5px 10px 10px;
+            flex-wrap: wrap;
+            a{
+                &:hover{
+                    color: red;
+                }
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                display: block;
+                width:65px;
+                font-size: 12px;
+                margin-right: 5px;
+            }
+        }
+        .hot-msg{
+            margin-top:20px;
+            h3{
+                width: 150px;
+            }
+            @extend .hot-sick;
+            a{
+                height: 36px;
+                width: 220px;
+                display:block;
+                line-height: 36px;
+            }
+        }
+    }
+}

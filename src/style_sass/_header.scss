@@ -40,6 +40,17 @@ $header_height:'36px';
            .header_collect{
                @include setPadding(0,10px,0 ,10px);
                border-right: 1px solid rgb(158, 154, 154);
+               span{
+                   display: inline-block;
+                   width: 12px;
+                   height: 12px;
+                   background: url('../img/common_sprite.png') no-repeat right -65px;
+                   
+               }
+              
+               
+
+               
            }
            /*------顶部左侧 li ------*/
            .header_target {
@@ -120,6 +131,13 @@ $header_height:'36px';
                //手机APP 
                .phone_app{
                 position: relative;
+                span{
+                    display: block;
+                    width: 12px;
+                    height: 14px;
+                    background: url('../img/common_sprite.png') no-repeat right -112px;
+                    margin-right: 2px;
+                }
                 &:hover{
                     background-color: white ;
                     dl{

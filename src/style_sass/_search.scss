@@ -35,11 +35,16 @@
         }
         .searchBtn{
             height: 46px;
-            width: 82;
+            width: 82px;
             border: 1px solid #c7a774;
             cursor: pointer;
             background-color: #fff;
             margin-left: -1px;
+            img{
+                width: 20px;
+                height: 20px;
+                margin: 0 auto;
+            }
         }
         .hotkeys{
             a{
@@ -65,10 +70,25 @@
         text-align: center;
         line-height: 36px;
         margin-right: 10px;
+        display: flex;
+        .cart{
+            background-color: red;
+            width: 36px;
+            height: 38px;
+            margin-left: 16px;
+            background: url('../img/common_sprite.png') -4px -312px;
+        };
+        .r-arrow{
+            background-color: red;
+            width: 36px;
+            height: 38px;
+            margin-right: 16px;
+            background: url('../img/common_sprite.png') right -312px;
+        }
         a{
             display: block;
             height: 36px;
-
+             
         }
     }
 }
