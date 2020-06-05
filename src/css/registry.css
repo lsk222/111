@@ -1,0 +1,139 @@
+#head-wrap{
+    width: 990px;
+    height: 98px;
+    margin: 0 auto;
+    padding-bottom: 20px;
+}
+
+/* 表单部分 */
+#reg-wrap{
+    width: 990px;
+    height: 580px;
+    margin: 0 auto;
+    border-top: 1px solid #009CF1;
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+.reg-head{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    height: 50px;
+}
+.reg-head p{
+    font-size: 12px;
+    margin: 13px 20px;
+}
+.reg-head p a{
+    color: red;
+}
+
+
+
+h2{
+    padding-left: 50px;
+    margin: 13px 0;
+}
+.reg-form{
+   
+    padding-left: 100px;
+}
+
+/* 手机号 密码 */
+.reg{
+    height: 70px;
+    width: 350px;
+}
+.tel-wrap,.pass-wrap,.pass-confirm{
+    border: 1px solid rgb(228, 195, 135);
+    width: 340px;
+    
+
+}
+.tel,.password,.confirm{
+    padding: 6px 0 6px 45px;
+    border: none;
+    /* height: 40px; */
+    height: 26px;
+    width: 210px;
+}
+.tel{
+    background: url('../img/regest.png') no-repeat 14px -113px;
+}
+.password{
+    background: url('../img/regest.png') no-repeat 14px -146px;
+
+}
+.confirm{
+    background: url('../img/regest.png') no-repeat 14px -146px;
+
+}
+.t-empty,.p-empty{
+    padding-right: 30px;
+    font-size: 12px;
+    font-style: normal;
+    float: right;
+    margin-top: 12px;
+    height: 26px;
+    display: none;
+    background: url(../img/regest.png) no-repeat right -58px;
+}
+.t-true,.p-true{
+    padding-right: 30px;
+    font-size: 12px;
+    font-style: normal;
+    float: right;
+    margin-top: 5px;
+    height: 26px;
+    background: url(../img/regest.png) no-repeat right 7px;
+    /* display: none; */
+
+}
+.xieyi{
+    font-size: 12px;
+    margin-bottom: 6px;
+}
+.xieyi a{
+    color: red;
+}
+.sub{
+    width: 340px;
+    margin-top: 34px;
+    background-color: #009CF1;
+    text-align: center;
+    height: 36px;
+    font-size: 20px;
+    color: white;
+    line-height: 36px;
+    border: none;
+    cursor: pointer;
+}
+/* 背景图 */
+.bgimg{
+    margin-left: 40px;
+    width: 500px;
+    height: 372px;
+    
+}
+
+/* 底部链接--begin */
+.footer{
+    width: 990px;
+    margin: 0 auto;
+    padding-top: 30px;
+}
+.footer p{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+p {
+    line-height: 26px;
+    font-size: 12px;
+    color: rgb(173, 163, 163);
+}
+a{
+    padding: 0 5px;
+    color: rgb(173, 163, 163);
+}

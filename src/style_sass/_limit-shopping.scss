@@ -2,15 +2,16 @@
     width: 1190px;
     height: 150px;
     margin: 10px auto;
-    background-color: pink;
     display: flex;
     .clock-wrap{
         width: 180px;
         height: 150px;
-        background-color: green;
+        background: url('../img/clock01.png') no-repeat;
     }
     .medList{
         display: flex;
+        width: 1010px;
+        justify-content: space-between;
         a{
             display: block;
         }

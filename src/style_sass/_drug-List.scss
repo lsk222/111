@@ -5,10 +5,13 @@
     margin: 0 auto;
     .drug1{
         margin: 5px 0 15px 0;
+
         width: 100%;
         height: 485px;
         display: flex;
-        border-bottom: 1px solid orange;
+        border-top: 2px solid rgb(236, 199, 130);
+        border-left: 1px solid rgb(221, 219, 219);
+        border-right: 1px solid rgb(221, 219, 219);
         .drug1-list{
             .listHeader{
                 background-color: #7EC6FF;
@@ -28,6 +31,8 @@
                     height: 49px;
                     line-height: 50px;
                     text-align: center;
+                    border-bottom: 1px solid rgb(221, 219, 219);
+                    border-right: 1px solid rgb(221, 219, 219);
                     a{
                         &:hover{
                             color: red;
@@ -40,8 +45,9 @@
         .drug1-detail{
             display: flex;
             flex-wrap: wrap;
+            justify-content: space-between;
             .detail-L{
-                width: 600px;
+                width: 605px;
                 height: 284px;
                 img{
                     cursor: pointer;
@@ -61,14 +67,17 @@
             }
             .detail-B{
                 display: flex;
-            dl{
+                justify-content: space-between;
+                dl{
                 
-                width: 160px;
+                width: 161px;
                 height: 170px;
                 padding: 20px 20px 10px;
                 text-align: center;
                 display: flex;
                 flex-direction: column;
+                border-bottom: 1px solid rgb(221, 219, 219);
+                border-right: 1px solid rgb(221, 219, 219);
                 dt{
                     display:flex ;
                     justify-content: center;
@@ -81,6 +90,10 @@
                         margin: 15px 0 15px;
                     }
                 }
+            }
+            
+            .clearR{
+                border-right:none;
             }
 
             }

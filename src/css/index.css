@@ -226,7 +226,7 @@
 #search .erDcode {
   width: 100px;
   height: 95px;
-  margin-left: 60px;
+  margin-right: -52px;
   margin-top: 20px;
 }
 #search .erDcode img {
@@ -477,16 +477,17 @@
   width: 1190px;
   height: 150px;
   margin: 10px auto;
-  background-color: pink;
   display: flex;
 }
 #limit-shopping .clock-wrap {
   width: 180px;
   height: 150px;
-  background-color: green;
+  background: url("../img/clock01.png") no-repeat;
 }
 #limit-shopping .medList {
   display: flex;
+  width: 1010px;
+  justify-content: space-between;
 }
 #limit-shopping .medList a {
   display: block;
@@ -503,7 +504,9 @@
   width: 100%;
   height: 485px;
   display: flex;
-  border-bottom: 1px solid orange;
+  border-top: 2px solid #ecc782;
+  border-left: 1px solid #dddbdb;
+  border-right: 1px solid #dddbdb;
 }
 #drug-List .drug1 .drug1-list .listHeader {
   background-color: #7EC6FF;
@@ -523,6 +526,8 @@
   height: 49px;
   line-height: 50px;
   text-align: center;
+  border-bottom: 1px solid #dddbdb;
+  border-right: 1px solid #dddbdb;
 }
 #drug-List .drug1 .drug1-list ul li a:hover {
   color: red;
@@ -530,9 +535,10 @@
 #drug-List .drug1 .drug1-detail {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
 }
 #drug-List .drug1 .drug1-detail .detail-L {
-  width: 600px;
+  width: 605px;
   height: 284px;
 }
 #drug-List .drug1 .drug1-detail .detail-L img {
@@ -552,14 +558,17 @@
 }
 #drug-List .drug1 .drug1-detail .detail-B {
   display: flex;
+  justify-content: space-between;
 }
 #drug-List .drug1 .drug1-detail .detail-B dl {
-  width: 160px;
+  width: 161px;
   height: 170px;
   padding: 20px 20px 10px;
   text-align: center;
   display: flex;
   flex-direction: column;
+  border-bottom: 1px solid #dddbdb;
+  border-right: 1px solid #dddbdb;
 }
 #drug-List .drug1 .drug1-detail .detail-B dl dt {
   display: flex;
@@ -569,11 +578,14 @@
 #drug-List .drug1 .drug1-detail .detail-B dl dd p {
   margin: 15px 0 15px;
 }
+#drug-List .drug1 .drug1-detail .detail-B .clearR {
+  border-right: none;
+}
 
 #ask-sick {
   width: 1190px;
   display: flex;
-  margin: 0 auto;
+  margin: 20px auto;
 }
 #ask-sick .ask-left {
   width: 930px;
@@ -621,12 +633,15 @@
   line-height: 38px;
   height: 38px;
   display: flex;
-  border-bottom: 1px solid gray;
+  border-bottom: 1px solid #d3cdcd;
   justify-content: space-between;
 }
 #ask-sick .ask-left .sick-top .header-list ul li a, #ask-sick .ask-left .sick-bottom .header-list ul li a, #ask-sick .ask-left .sick-bottom .bottom-list ul li a {
   font-weight: bolder;
   font-size: 16px;
+}
+#ask-sick .ask-left .sick-bottom {
+  margin-top: 30px;
 }
 #ask-sick .ask-left .sick-bottom .tab-header {
   background-color: #CBC3F2;

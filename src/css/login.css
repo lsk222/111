@@ -1,0 +1,155 @@
+#head-wrap{
+    width: 990px;
+    height: 98px;
+    margin: 0 auto;
+    padding-bottom: 20px;
+}
+
+/* 表单部分 */
+#login-wrap{
+    width: 990px;
+    height: 580px;
+    margin: 0 auto;
+    border-top: 3px solid #009CF1;
+    display: flex;
+    flex-wrap: wrap;
+}
+.login-head{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    height: 50px;
+}
+.login-head p{
+    font-size: 12px;
+    margin: 13px 20px;
+}
+.login-head p a{
+    color: red;
+}
+h2{
+    padding-left: 50px;
+    margin: 13px 0;
+}
+.login-form{
+    padding-left: 100px;
+}
+.login-tabs{
+    margin: 8px 0;
+}
+.login-tabs span{
+    display: inline-block;
+    width: 120px;
+    height: 40px;
+    text-align:center;
+    background-color: rgb(168, 159, 159);
+    line-height: 40px;
+}
+.login-tips {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+.login-tips a{
+    color: red;
+}
+
+/* 手机号 密码 */
+.login{
+    height: 70px;
+    width: 350px;
+}
+.tel-wrap,.pass-wrap{
+    border: 1px solid rgb(228, 195, 135);
+    width: 340px;
+    
+}
+.yanzheng-confirm{
+    border: 1px solid rgb(228, 195, 135);
+    width: 200px;
+}
+.yanzheng-confirm .yanzheng{
+    padding: 6px 0 6px 20px;
+    height: 26px;
+    border:none;
+}
+.tel,.password{
+    padding: 6px 0 6px 45px;
+    border: none;
+    /* height: 40px; */
+    height: 26px;
+    width: 210px;
+}
+.tel{
+    background: url('../img/regest.png') no-repeat 14px -113px;
+}
+.password{
+    background: url('../img/regest.png') no-repeat 14px -146px;
+
+}
+.confirm{
+    background: url('../img/regest.png') no-repeat 14px -146px;
+
+}
+.t-empty,.p-empty{
+    padding-right: 30px;
+    font-size: 12px;
+    font-style: normal;
+    float: right;
+    margin-top: 12px;
+    height: 26px;
+    display: none;
+    background: url(../img/regest.png) no-repeat right -58px;
+}
+.t-true,.p-true{
+    padding-right: 30px;
+    font-size: 12px;
+    font-style: normal;
+    float: right;
+    margin-top: 5px;
+    height: 26px;
+    background: url(../img/regest.png) no-repeat right 7px;
+    /* display: none; */
+
+}
+
+.sub{
+    width: 340px;
+    margin-top: 4px;
+    background-color: #009CF1;
+    text-align: center;
+    height: 36px;
+    font-size: 20px;
+    color: white;
+    line-height: 36px;
+    border: none;
+    cursor: pointer;
+}
+/* 背景图 */
+.bgimg{
+    margin-left: 40px;
+    width: 500px;
+    height: 372px;
+    
+}
+
+/* 底部链接--begin */
+.footer{
+    width: 990px;
+    margin: 0 auto;
+    padding-top: 30px;
+}
+.footer p{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+p {
+    line-height: 26px;
+    font-size: 12px;
+    color: rgb(173, 163, 163);
+}
+a{
+    padding: 0 5px;
+    color: rgb(173, 163, 163);
+}

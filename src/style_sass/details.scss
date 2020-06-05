@@ -1,0 +1,26 @@
+@import './header';
+@import './search';
+@import './rightBar';
+@import './headerNav';
+#headerNav{
+    .allsort{
+        ul{
+            display: none;
+        }
+        .all{
+            display: flex;
+            // justify-content: space-between;
+            // align-items: center;
+            span{
+                align-self: center;
+                margin-bottom: -4px;
+                margin-left: 16px;
+                display: inline-block;
+                width: 20px;;
+                height: 20px;
+                background: url('../img/common_sprite.png') no-repeat right 9px;
+            }
+        }
+    }
+}
+@import './pagefooter';

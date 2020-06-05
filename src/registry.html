@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>注册</title>
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/registry.css">
+</head>
+<body>
+    <div id="head-wrap">
+         <a href=""><img src="https://s.maiyaole.com/images/passport/yao_logo.png" alt=""></a>
+    </div>
+    <div id="reg-wrap">
+        <div class="reg-head">
+            <h2>Hi 欢迎注册</h2>
+            <p>我已经注册，请 <a href="">登录</a></p>
+           
+        </div>
+        <!-- 表单和背景 -->
+        <div class="reg-form">
+            <div class="reg">
+                <p class="tel-wrap"><input type="text" class="tel"><i class="t-empty">不能为空</i><i class="t-true">&nbsp;</i></p>
+            </div>
+            <div class="reg">
+                <p class="pass-wrap"><input type="text" class="password"><i class="p-empty">不能为空</i><i class="p-true">&nbsp;</i></p>
+            </div>
+            <div class="reg">
+                <p class="pass-confirm"><input type="text" class="confirm"><i class="t-empty">不能为空</i><i class="t-true">&nbsp;</i></p>
+            </div>
+            <p class='xieyi'>注册即代表您已同意医药网<a href="">服务协议</a>和<a href="">隐私条款</a></p>
+            <input type="submit" value="立即注册" class="sub">
+        </div>
+
+        <div class="bgimg">
+            <img src="./img/r_bg_02.png" alt="">
+        </div>
+        <!-- 底部链接 -->
+        <div class="footer">
+        </div>
+    </div>
+</body>
+<script src="./js/jquery.js"></script>
+<script>
+    $('.footer').load('./commonH/common-f.html');
+</script>
+</html>

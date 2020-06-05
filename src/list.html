@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>列表页</title>
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/list.css">
+</head>
+<body>
+     <!-- header begin -->
+     <div id="header"></div>
+     <!-- header end -->
+ 
+     <!-- search begin -->
+     <div id="search"></div>
+     <!-- search end -->
+ 
+     <!-- headerNav begin -->
+     <div id="headerNav-wrap"></div>
+      <!-- headerNav end -->
+
+       <!-- page footer begin-->
+    <div id="page-footer"></div>
+       <!-- page footer end -->
+
+       <!-- right bar begin -->
+    <div id="right-bar"> </div>
+       <!-- right bar end -->
+</body>
+<script src="./js/jquery.js"></script>
+<script>
+    $('#header').load('./commonH/comm-header.html');
+    $('#search').load('./commonH/comm-search.html');
+    $('#headerNav-wrap').load('./commonH/comm-nav.html');
+    $('#page-footer').load('./commonH/comm-footer.html')
+    $('#right-bar').load('./commonH/comm-rightbar.html')
+
+</script>
+</html>

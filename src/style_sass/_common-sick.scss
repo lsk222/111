@@ -1,8 +1,7 @@
 #ask-sick{
     width: 1190px;
     display: flex;
-
-    margin: 0 auto;
+    margin: 20px auto;
     // 左边 常见病和科室
     .ask-left{
         width: 930px;
@@ -50,7 +49,7 @@
                         line-height: 38px;
                         height: 38px;
                         display: flex;
-                        border-bottom: 1px solid gray;
+                        border-bottom: 1px solid rgb(211, 205, 205);
                         justify-content: space-between;
                         a{
                             font-weight: bolder;
@@ -61,6 +60,7 @@
             }
         }
         .sick-bottom{
+            margin-top: 30px;
            @extend .sick-top;
            .tab-header{
                background-color: #CBC3F2;
@@ -76,6 +76,7 @@
     
     //右边 热门疾病和热点资讯
     .hot{
+        
         .hot-sick{
             margin-left: 15px;
         }
