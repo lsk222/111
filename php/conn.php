@@ -5,7 +5,7 @@ header('content-type:text/html;charset=utf-8');
 define('HOST', 'localhost'); //主机名
 define('USERNAME', 'root'); //用户名
 define('PASSWORD', ''); //密码
-define('DBNAME', 'wrong'); //数据库名称
+define('DBNAME', '111'); //数据库名称
 $conn = @new mysqli(HOST, USERNAME, PASSWORD, DBNAME);
 //@符号：php的容错处理(一般情况是自己定义了错误类型，使用)。(js里面也有-try...catch...finally)
 if ($conn->connect_error) {

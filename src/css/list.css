@@ -437,6 +437,7 @@
 }
 #druglist-wrap .sortOrder .sort-title {
   display: flex;
+  margin-left: 20px;
 }
 #druglist-wrap .sortOrder .sort-title li {
   height: 30px;
@@ -445,7 +446,10 @@
   margin-right: 1px;
   text-align: center;
 }
-#druglist-wrap .sortOrder .sort-title li a {
+#druglist-wrap .sortOrder .sort-title li button {
+  display: inline-block;
+  border: none;
+  cursor: pointer;
   padding: 0 10px;
 }
 #druglist-wrap .sortOrder .sort-title .selected {
@@ -455,7 +459,6 @@
   display: flex;
   flex-wrap: wrap;
   margin: 20px 0 20px 170px;
-  justify-content: space-between;
 }
 #druglist-wrap .list-detail li {
   width: 200px;

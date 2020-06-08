@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>列表页</title>
+    <link rel="stylesheet" href="./css/pagination.css">
     <link rel="stylesheet" href="./css/common.css">
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/list.css">
@@ -26,120 +27,23 @@
     <div id="druglist-wrap">
         <div class="sortOrder">
             <ul class='sort-title'>
-                <li><a href="" class="selected">综合</a> </li>
-                <li> <a href="">销量</a></li>
-                <li><a href="">价格</a></li>
-                <li><a href="">人气</a></li>
-                <li><a href="">自营</a></li>
+                <li><button  class="selected">综合</a> </li>
+                <li> <button  class='sailnum'>销量</button></li>
+                <li><button class="increase">价格升序</button></li>
+                <li><button href="">人气</button></li>
+                <li><button href="">自营</button></li>
             </ul>
         </div>
         <ul class="list-detail">
+          
+    </ul>
+    </div>
 
-            <li>
-                <dl>
-                    <dt>
-                        <a href=""><img src="https://p2.maiyaole.com/img/item/202004/29/200_20200429184119743.jpg"
-                                alt="">
-                        </a>
-                    </dt>
-                    <dd>
-                        <span>39.9</span>
-                        <p>康恩贝维生素E软胶囊</p>
-                    </dd>
-                </dl>
-            </li>
-            <li>
-                <dl>
-                    <dt>
-                        <a href=""><img src="https://p2.maiyaole.com/img/item/202004/29/200_20200429184119743.jpg"
-                                alt="">
-                        </a>
-                    </dt>
-                    <dd>
-                        <span>39.9</span>
-                        <p>康恩贝维生素E软胶囊</p>
-                    </dd>
-                </dl>
-            </li>
-            <li>
-                <dl>
-                    <dt>
-                        <a href=""> <img src="https://p2.maiyaole.com/img/item/202004/29/200_20200429184119743.jpg"
-                                alt="">
-                        </a>
-                    </dt>
-                    <dd>
-                        <span>39.9</span>
-                        <p>康恩贝维生素E软胶囊</p>
-                    </dd>
-                </dl>
-            </li>
-            <li>
-                <dl>
-                    <dt>
-                        <a href=""><img src="https://p2.maiyaole.com/img/item/202004/29/200_20200429184119743.jpg"
-                                alt="">
-                        </a>
-                    </dt>
-                    <dd>
-                        <span>39.9</span>
-                        <p>康恩贝维生素E软胶囊</p>
-                    </dd>
-                </dl>
-            </li>
-            <li>
-                <dl>
-                    <dt>
-                        <a href=""> <img src="https://p2.maiyaole.com/img/item/202004/29/200_20200429184119743.jpg"
-                                alt="">
-                        </a>
-                    </dt>
-                    <dd>
-                        <span>39.9</span>
-                        <p>康恩贝维生素E软胶囊</p>
-                    </dd>
-                </dl>
-            </li>
-            <li>
-                <dl>
-                    <dt>
-                        <a href=""> <img src="https://p2.maiyaole.com/img/item/202004/29/200_20200429184119743.jpg"
-                                alt="">
-                        </a>
-                    </dt>
-                    <dd>
-                        <span>39.9</span>
-                        <p>康恩贝维生素E软胶囊</p>
-                    </dd>
-                </dl>
-            </li>
-            <li>
-                <dl>
-                    <dt>
-                        <a href=""><img src="https://p2.maiyaole.com/img/item/202004/29/200_20200429184119743.jpg"
-                                alt="">
-                        </a>
-                    </dt>
-                    <dd>
-                        <span>39.9</span>
-                        <p>康恩贝维生素E软胶囊</p>
-                    </dd>
-                </dl>
-            </li>
-            <li>
-                <dl>
-                    <dt>
-                        <a href=""><img src="https://p2.maiyaole.com/img/item/202004/29/200_20200429184119743.jpg"
-                                alt="">
-                        </a>
-                    </dt>
-                    <dd>
-                        <span>39.9</span>
-                        <p>康恩贝维生素E软胶囊</p>
-                    </dd>
-                </dl>
-            </li>
-        </ul>
+    
+    <!-- 分页的结构:插件 -->
+    <div class="pagelist">
+        <div class="m-style page">
+        </div>
     </div>
 
 
@@ -153,17 +57,28 @@
 </body>
 <script src="./js/jquery.js"></script>
 <script>
-    let topValue=null;
+    let flag=false;
     $('#header').load('./commonH/comm-header.html');
     $('#search').load('./commonH/comm-search.html',function(responseTxt, statusTxt){
+        const $searchform=$('.searchForm');
+        console.log('searchForm:'+$searchform)
         if(statusTxt=='success'){
-            $(document).on('scroll',function(){
-                
-                    console.log('1111');
-              
+            $(window).on('scroll',function(){
+                console.log('searchForm');
+                if(flag){
+                  $searchform.css({
+                      position:"fixed",
+                      left:254,
+                      top:0
+                  });
+                }else{
+                    $searchform.css({
+                      position:"static"
+                  });
+                }
             })
         }
-
+           
     });
     $('#headerNav-wrap').load('./commonH/comm-nav.html', function (responseTxt, statusTxt) {
         if (statusTxt == 'success') {
@@ -189,11 +104,25 @@
             $(window).on('scroll',function(ev){
                 console.log('1111');
                 let $top=$(window).scrollTop();
-                console.log($top);
+                
                 let $navTop=$('#headerNav').offset().top;
+                
                 console.log("navtop"+$navTop);
-                // if($top>)
-            })
+                 if($top>=$navTop){
+                     flag=true;
+                     $display.css({
+                         position:"fixed",
+                         left:70,
+                         top:0
+                     })
+                 }else{
+                     flag=false;
+                     $display.css({
+                         position:"static",
+                        
+                     })
+                 }
+            });
               
 
         }
@@ -202,5 +131,7 @@
     $('#right-bar').load('./commonH/comm-rightbar.html')
 
 </script>
-
+<script src="thirdplugins/jquery.pagination.js"></script>
+<script src="thirdplugins/jquery.lazyload.js"></script>
+<script src="./js/list.js"></script>
 </html>

@@ -34,7 +34,7 @@
           display: flex;
           flex-direction: column;
           dt{
-             
+              position: relative;
               .smallpic{
                   width: 298px;
                   height: 298px;
@@ -44,29 +44,56 @@
                       height: 100%;
                   }
               }
+              .scalepic{
+                  position: absolute;
+                  left: 300px;
+                  top: 0;
+                   width:380px ;
+                   height: 380px;
+                   background-color: pink;
+              }
+              .smallM{
+                  position: absolute;
+                  top:0;
+                  left: 0;
+                  background-color: red;
+                  width: 141px;
+                  height: 141px;
+                  opacity: .5;
+              }
           }
+
           dd{
+             display: flex;
+             span{
+                cursor: pointer;
+                height: 50px;
+                margin: 1px;
+                line-height: 50px;
+                font-size: 20px;
+                margin-top: 10px;
+                border:1px solid rgb(173, 164, 164);
+            }
+         
+             .minpics{
+                width: 241px;
+                overflow: hidden;
+                 
+             }
+           
               ul{
                   width: 300px;
+                  overflow: hidden;
                   margin-top: 10px;
                   border:1px solid rgb(206, 198, 198);
                   display: flex;
-                  span{
-                      width: 24px;
-                      height: 49px;
-                      cursor: pointer;
-                      line-height: 49px;
-                      font-size: 20px;
-                      text-align: center;
-                  }
-                 
+                  overflow: hidden;
                   li{
-                      width: 49px;
+                      width: 46px;
                       height: 49px;
                       border: 1px solid transparent;
                       &:hover{
                         border: 1px solid red;
-
                       }
                       img{
                           width:100% ;
