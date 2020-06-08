@@ -17,15 +17,19 @@
             .all{
                 display: block;
                 line-height: 48px;
-                color:white
+                color:white;
+               
             }
             ul{
                 position: absolute;
                 left: 0;
-                height: 402px;
+                height: 404px;
+                margin-top: -2px;
+                z-index: 99;
                 background-color: #2A4449; 
-                li{         
-                    a{
+                li{     
+                    // position: relative;    
+                    .title{
                         width: 166px;
                         padding-left: 14px;
                         display: block;
@@ -33,6 +37,57 @@
                         line-height: 40px;                  
                         color: white;
                         font-size: 14px;
+                    }
+
+                    .sortList{
+                        // display: flex;
+                        width: 1009px;
+                        display: none;
+                         background-color:white;
+                        position: absolute;
+                        height: 402px;
+                        top:3px;
+                        left: 180px;
+                        z-index: 999;
+                        .mode-bg{
+                            display: flex;
+                            flex-direction: column;
+                            float: left;
+                        }
+                        
+                        dl{
+                            margin-top: 10px;
+                           dt{
+                               font-weight: bold;
+                               padding-left: 20px;
+                               font-size: 14px;
+                               margin-bottom: 5px;
+                           }
+                            dd{
+                             
+                                width: 252px;
+                                a{
+                                    &:hover{
+                                        color: red;
+                                    }
+                                    // border-left: 1px solid grey;
+                                    float: left;
+                                    display: inline-block;
+                                    padding: 0 20px;
+                                    margin: 5px 0;
+                                    height: 12px;
+                                    padding-left: 20px;
+                                    font-size: 12px;
+                                    // border-left: 2px solid red;
+                                    // border-left: 1px solid red;
+                                }
+                            }
+                        }
+                        .mode-bgads{
+                            float: left;
+                            width: 252px;
+                            background-color: black;
+                        }
                     }
                 }
             }

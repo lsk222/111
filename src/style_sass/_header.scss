@@ -66,14 +66,24 @@ $header_height:'36px';
                    margin-top: -1px; 
                    z-index: 99;                        
                 } 
-                .city{  
-                    height: 40px;
-                    z-index: 555;  
-                }               
+                .city .city-arrow{
+                    background: url('../img/common_sprite.png') no-repeat right -18px;
+                                 }      
         
                }
-               .city{                  
+               .city{
+                   z-index: 555;         
                    height: 36px;
+                   display: flex;
+                   justify-content: space-around;
+                   align-items: center;
+                   .city-arrow{
+                       display: inline-block;
+                       width: 20px;
+                       height: 20px;
+                       background-color: red;
+                       background: url('../img/common_sprite.png') no-repeat right 8px;
+                   }
                    
                }
                ul{
@@ -112,6 +122,11 @@ $header_height:'36px';
                line-height: 36px;
                @include setPadding(0,10px ,0 ,10px);
                //border-right: 1px solid grey;
+               .h-light{
+                color: #c7a774;
+                font-weight: 700;
+                font-family: Tahoma;
+               }
                a{
                     display: block;                   
                     line-height: 36px; 

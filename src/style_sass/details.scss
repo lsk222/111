@@ -23,4 +23,141 @@
         }
     }
 }
+#drug-details{
+    width: 1190px;
+    margin: 0 auto;
+    
+  .details-wrap{
+      display: flex;
+      margin: 30px 0;
+      .pic-show{
+          display: flex;
+          flex-direction: column;
+          dt{
+             
+              .smallpic{
+                  width: 298px;
+                  height: 298px;
+                  cursor: crosshair;
+                  img{
+                      width: 100%;
+                      height: 100%;
+                  }
+              }
+          }
+          dd{
+              ul{
+                  width: 300px;
+                  margin-top: 10px;
+                  border:1px solid rgb(206, 198, 198);
+                  display: flex;
+                  span{
+                      width: 24px;
+                      height: 49px;
+                      cursor: pointer;
+                      line-height: 49px;
+                      font-size: 20px;
+                      text-align: center;
+                  }
+                 
+                  li{
+                      width: 49px;
+                      height: 49px;
+                      border: 1px solid transparent;
+                      &:hover{
+                        border: 1px solid red;
+
+                      }
+                      img{
+                          width:100% ;
+                          height: 100%;
+                      }
+                  }
+              }
+          }
+      }
+      .details-info{
+          margin-left: 40px;
+          dt{
+            h4{
+                padding: 15px 0;
+  
+            }
+          }
+          dd{
+              margin-top: 40px;
+              display:flex;
+              flex-direction: column;
+              .count{
+                  display: flex;
+                label{
+                    font-size: 12px;
+                    height: 40px;
+                    line-height: 40px;
+                   
+                }
+                input{
+                    padding: 15px 10px;
+                    width: 82px;
+                    margin-left: 10px;
+                    border: 1px solid rgb(194, 188, 188);
+                }
+                .operator{
+                    display: flex;
+                    flex-direction: column;
+                }
+                .minus{
+                    display: block;
+                    background: url("../img/icon_detail.png") no-repeat -2px -1345px;
+                    cursor: pointer;
+                    width: 20px;
+                    height: 22px;
+                    border: 1px solid rgb(172, 166, 166);
+                    // border: none;
+                    margin:1px;
+                }
+                .add{
+                    display: block;
+                    width: 20px;
+                    height: 22px;
+                    border: 1px solid rgb(172, 166, 166);
+                    background: url("../img/icon_detail.png") no-repeat  -2px -1371px;
+                    cursor: pointer;
+                    margin:1px;
+                    // border: none;
+                }
+
+              }
+
+              .cart{
+                  margin-top: 40px;
+                  background-color: red;
+                  height: 80px;
+                  display: flex;
+                  align-items: center;
+                 
+                  span{
+                      display: inline-block;
+                      height: 80px;
+                      width: 80px;
+                      background: url("../img/icon_detail.png") no-repeat 28px -744px;
+                      cursor: pointer;
+                      
+                  }
+                  input{
+                      padding: 20px 10px;
+                      font-size: 30px;
+                      color:white;
+                      border: none;
+                      background-color: red;
+                      cursor: pointer;
+                      
+                  }
+              }
+            
+          }
+          
+      }
+  }
+}
 @import './pagefooter';

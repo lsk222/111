@@ -1,0 +1,90 @@
+@import "./header";
+#logo{
+    width: 1190px;
+    height: 120px;
+    // background-color: red;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    ol{
+        display: flex;
+        li{
+            height: 32px;
+            width: 172px;
+            background-color:  #F3F3F3;
+            span{
+                display: block;
+                width: 150px;
+                height: 32px;
+                line-height: 32px;
+                text-align: center;
+                font-size: 14px;
+               
+            }
+        }
+        .first{
+            background:url("../img/followstep.png") no-repeat right top;
+            background-color: #0083ce;
+           
+        }
+        .second{
+            background:url("../img/followstep.png") no-repeat right top;
+            background-color: #F3F3F3;         
+        }
+        
+       
+    }
+    
+}
+#cart{
+    width: 1190px;
+    margin: 0 auto;
+}
+tbody{
+    tr{
+        td{
+            text-align: center;
+            .minus{
+                display: inline-block;
+                font-size: 14px;
+                cursor: pointer;
+                width: 20px;
+                height: 22px;
+               
+                background: url("../img/common_sprite.png") no-repeat -158px 8px;
+
+                border: 1px solid rgb(172, 166, 166);
+                // border: none;
+                margin:1px;
+                margin-bottom: -6px;
+               
+            }
+            .add{
+                font-size: 14px;
+                display: inline-block;
+                width: 20px;
+                height: 22px;
+                border: 1px solid rgb(192, 185, 185);
+                cursor: pointer;
+                margin:1px;
+                
+                margin-bottom: -6px;
+                background: url("../img/common_sprite.png") no-repeat -158px -17px;
+
+                // border: none;
+            }
+            .shownum{
+                font-size: 14px;
+                display: inline-block;
+                width: 30px;
+                height: 22px;                
+                text-align: center;
+                border: 1px solid rgb(192, 185, 185);                
+                margin:1px;
+                margin-top: -2px;
+                
+            }
+        }
+    }
+}

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>购物车</title>
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">  
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/shoppingCart.css">
+    <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+	<script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div id="header"></div>
+    <div id="logo">
+        <a href=""><img src="./img/logo_01.png" alt=""></a>
+        <div id="shopping-steps">
+            <ol>
+                <li class="first"><span >1.我的购物车</span></li>
+                <li class="second"><span>2.填写核对订单信息</span>  </li>
+                <li class="third"><span>3.成功提交订单</span></li>
+            </ol>
+        </div>
+    </div>
+    <div id="cart">
+        <div class="container">  
+            <p class="h3 ">我的购物车</p>      
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th style="text-align: center;"><input type="checkbox" name="" id="">  全选</th>
+                        <th style="text-align: center;">商品</th>
+                        <th style="text-align: center;">单价（元）</th>
+                        <th style="text-align: center;"> 数量 </th>
+                        <th style="text-align: center;">重量</th>
+                        <th style="text-align: center;">小计</th>
+                        <th style="text-align: center;">>操作</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><input type="checkbox" name="" id=""></td>
+                        <td> <img src="https://p4.maiyaole.com/img/item/202004/15/65_20200415155231997.jpg" alt=""></td>
+                        <td>27</td>
+                        <td> <span class="minus"></span><span class="shownum">3</span><span class="add"></span></td>
+                        <td>3.0kg</td>
+                        <td>70.0(元)</td>
+                        <td><button style="margin-right: 5px;" type="button" class="btn btn-danger">删除</button><button type="button" class="btn btn-primary">收藏</button></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" name="" id=""></td>
+                        <td> <img src="https://p4.maiyaole.com/img/item/202004/15/65_20200415155231997.jpg" alt=""></td>
+                        <td>27</td>
+                        <td><span class="minus"></span><span class="shownum">3</span><span class="add"></span></td>
+                        <td>3.0kg</td>
+                        <td>70.0(元)</td>
+                        <td><button style="margin-right: 5px;" type="button" class="btn btn-danger">删除</button><button type="button" class="btn btn-primary">收藏</button></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" name="" id=""></td>
+                        <td> <img src="https://p4.maiyaole.com/img/item/202004/15/65_20200415155231997.jpg" alt=""></td>
+                        <td>27</td>
+                        <td><span class="minus"></span><span class="shownum">3</span><span class="add"></span></td>
+                        <td>3.0kg</td>
+                        <td>70.0(元)</td>
+                        <td><button style="margin-right: 5px;" type="button" class="btn btn-danger">删除</button><button type="button" class="btn btn-primary">收藏</button></td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr >
+        
+                        <td colspan="6" id='sum'> <input type="checkbox" name="" id=""> 全选 <span>商品总价：1000.00(元)</span></td>
+                        <td><button style="margin-right: 5px;" type="button" class="btn btn-primary">继续购物</button><button type="button" class="btn btn-danger">去结算</button></td>
+                        
+                    </tr>
+                    
+                </tfoot>
+            </table>
+        </div> 
+    </div>
+</body>
+</html>
+<script src='./js/jquery.js'></script>
+<script>
+    $('#header').load("./commonH/comm-header.html");
+</script>

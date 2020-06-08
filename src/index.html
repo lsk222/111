@@ -140,7 +140,7 @@
             </div>
             <div class="drug1-detail">
                 <div class="detail-L">
-                    <img src="https://p3.maiyaole.com/img/item/1503969299913113.jpg" alt="">
+                    <img src="https://p3.maiyaole.com/img/cmsPage/2016041101/louceng99999999999.jpg" alt="">
 
                 </div>
                 <div class="detail-R">
@@ -229,7 +229,7 @@
             </div>
             <div class="drug1-detail">
                 <div class="detail-L">
-                    <img src="https://p3.maiyaole.com/img/item/1503969299913113.jpg" alt="">
+                    <img src="https://p3.maiyaole.com/img/cmsPage/2016041101/louceng99999999999.jpg" alt="">
 
                 </div>
                 <div class="detail-R">
@@ -632,18 +632,59 @@
     </div>
 
     <!-- page footer -->
-    <div id="page-footer">
-       
+    <div id="page-footer"> </div>
+
+    <!-- 楼层效果 -->
+    <div id="elevator">
+        <a href="" class="shopping">今日<br>限时购</a>
+        <ul>
+            <li> 
+                  <a href="">1F</a>  
+                  <a href="" class="entitle">家庭常备药</a>
+            </li>
+            <li>
+                <a href="">2F</a>  
+                <a href="" class="entitle">专科用药</a>
+            </li>
+            <li>
+                <a href="">3F</a>  
+                <a href="" class="entitle">滋补保健</a>
+            </li>
+            <li class="last-el">
+                <a href="">4F</a>  
+                <a href="" class="entitle">维生素钙</a>
+            </li>
+           
+        </ul>
     </div>
 
 </body>
-<script src="./js/jquery.js"></script>
-<script src="./js/lunbo.js"></script>
-<script>
-    $('#header').load('./commonH/comm-header.html');
-    $('#search').load('./commonH/comm-search.html');
-    $('#headerNav-wrap').load('./commonH/comm-nav.html');
-    $('#page-footer').load('./commonH/comm-footer.html')
-    $('#right-bar').load('./commonH/comm-rightbar.html')
-</script>
+
 </html>
+<script src="./js/jquery.js"></script>
+<script>
+    $('#header').load('./commonH/comm-header.html',function(){
+
+    });
+    $('#search').load('./commonH/comm-search.html');
+     $('#headerNav-wrap').load('./commonH/comm-nav.html',function(response,statusTxt){
+         if(statusTxt=='success'){
+           
+            let $navWrap=$('#headerNav .allsort ul li');
+            console.log($navWrap);
+            $navWrap.on('mouseover',function(){
+                $(this).find('.sortList').show();
+            });
+            $navWrap.on('mouseout',function(){
+                $(this).find('.sortList').hide();
+            });
+         }
+     }
+    );   
+    $('#page-footer').load('./commonH/comm-footer.html')
+    $('#right-bar').load('./commonH/comm-rightbar.html',()=>{
+        console.log('jjjjj');
+    });
+</script>
+<script src="./js/lunbo.js"></script>
+<!-- <script src='./js/index.js'></script> -->

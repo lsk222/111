@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,34 +9,198 @@
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/list.css">
 </head>
+
 <body>
-     <!-- header begin -->
-     <div id="header"></div>
-     <!-- header end -->
- 
-     <!-- search begin -->
-     <div id="search"></div>
-     <!-- search end -->
- 
-     <!-- headerNav begin -->
-     <div id="headerNav-wrap"></div>
-      <!-- headerNav end -->
+    <!-- header begin -->
+    <div id="header"></div>
+    <!-- header end -->
 
-       <!-- page footer begin-->
+    <!-- search begin -->
+    <div id="search"></div>
+    <!-- search end -->
+
+    <!-- headerNav begin -->
+    <div id="headerNav-wrap"></div>
+    <!-- headerNav end -->
+
+    <div id="druglist-wrap">
+        <div class="sortOrder">
+            <ul class='sort-title'>
+                <li><a href="" class="selected">综合</a> </li>
+                <li> <a href="">销量</a></li>
+                <li><a href="">价格</a></li>
+                <li><a href="">人气</a></li>
+                <li><a href="">自营</a></li>
+            </ul>
+        </div>
+        <ul class="list-detail">
+
+            <li>
+                <dl>
+                    <dt>
+                        <a href=""><img src="https://p2.maiyaole.com/img/item/202004/29/200_20200429184119743.jpg"
+                                alt="">
+                        </a>
+                    </dt>
+                    <dd>
+                        <span>39.9</span>
+                        <p>康恩贝维生素E软胶囊</p>
+                    </dd>
+                </dl>
+            </li>
+            <li>
+                <dl>
+                    <dt>
+                        <a href=""><img src="https://p2.maiyaole.com/img/item/202004/29/200_20200429184119743.jpg"
+                                alt="">
+                        </a>
+                    </dt>
+                    <dd>
+                        <span>39.9</span>
+                        <p>康恩贝维生素E软胶囊</p>
+                    </dd>
+                </dl>
+            </li>
+            <li>
+                <dl>
+                    <dt>
+                        <a href=""> <img src="https://p2.maiyaole.com/img/item/202004/29/200_20200429184119743.jpg"
+                                alt="">
+                        </a>
+                    </dt>
+                    <dd>
+                        <span>39.9</span>
+                        <p>康恩贝维生素E软胶囊</p>
+                    </dd>
+                </dl>
+            </li>
+            <li>
+                <dl>
+                    <dt>
+                        <a href=""><img src="https://p2.maiyaole.com/img/item/202004/29/200_20200429184119743.jpg"
+                                alt="">
+                        </a>
+                    </dt>
+                    <dd>
+                        <span>39.9</span>
+                        <p>康恩贝维生素E软胶囊</p>
+                    </dd>
+                </dl>
+            </li>
+            <li>
+                <dl>
+                    <dt>
+                        <a href=""> <img src="https://p2.maiyaole.com/img/item/202004/29/200_20200429184119743.jpg"
+                                alt="">
+                        </a>
+                    </dt>
+                    <dd>
+                        <span>39.9</span>
+                        <p>康恩贝维生素E软胶囊</p>
+                    </dd>
+                </dl>
+            </li>
+            <li>
+                <dl>
+                    <dt>
+                        <a href=""> <img src="https://p2.maiyaole.com/img/item/202004/29/200_20200429184119743.jpg"
+                                alt="">
+                        </a>
+                    </dt>
+                    <dd>
+                        <span>39.9</span>
+                        <p>康恩贝维生素E软胶囊</p>
+                    </dd>
+                </dl>
+            </li>
+            <li>
+                <dl>
+                    <dt>
+                        <a href=""><img src="https://p2.maiyaole.com/img/item/202004/29/200_20200429184119743.jpg"
+                                alt="">
+                        </a>
+                    </dt>
+                    <dd>
+                        <span>39.9</span>
+                        <p>康恩贝维生素E软胶囊</p>
+                    </dd>
+                </dl>
+            </li>
+            <li>
+                <dl>
+                    <dt>
+                        <a href=""><img src="https://p2.maiyaole.com/img/item/202004/29/200_20200429184119743.jpg"
+                                alt="">
+                        </a>
+                    </dt>
+                    <dd>
+                        <span>39.9</span>
+                        <p>康恩贝维生素E软胶囊</p>
+                    </dd>
+                </dl>
+            </li>
+        </ul>
+    </div>
+
+
+    <!-- page footer begin-->
     <div id="page-footer"></div>
-       <!-- page footer end -->
+    <!-- page footer end -->
 
-       <!-- right bar begin -->
+    <!-- right bar begin -->
     <div id="right-bar"> </div>
-       <!-- right bar end -->
+    <!-- right bar end -->
 </body>
 <script src="./js/jquery.js"></script>
 <script>
+    let topValue=null;
     $('#header').load('./commonH/comm-header.html');
-    $('#search').load('./commonH/comm-search.html');
-    $('#headerNav-wrap').load('./commonH/comm-nav.html');
+    $('#search').load('./commonH/comm-search.html',function(responseTxt, statusTxt){
+        if(statusTxt=='success'){
+            $(document).on('scroll',function(){
+                
+                    console.log('1111');
+              
+            })
+        }
+
+    });
+    $('#headerNav-wrap').load('./commonH/comm-nav.html', function (responseTxt, statusTxt) {
+        if (statusTxt == 'success') {
+            const $display = $('#headerNav .sort-display');
+            const $ul = $display.find('ul');
+            console.log($display);
+            $display.hover(function () {
+                console.log('hhhhh');
+                //鼠标进入
+                $ul.show();
+                $ul.children().on('mouseover',function(){
+                    $(this).find('.sortList').show();
+                });
+                $ul.children().on('mouseout',function(){
+                    $(this).find('.sortList').hide();
+                });
+
+            }, function () {
+                //鼠标离开
+                $ul.hide();
+            });
+
+            $(window).on('scroll',function(ev){
+                console.log('1111');
+                let $top=$(window).scrollTop();
+                console.log($top);
+                let $navTop=$('#headerNav').offset().top;
+                console.log("navtop"+$navTop);
+                // if($top>)
+            })
+              
+
+        }
+    });
     $('#page-footer').load('./commonH/comm-footer.html')
     $('#right-bar').load('./commonH/comm-rightbar.html')
 
 </script>
+
 </html>

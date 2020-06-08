@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>列表页</title>
+    <title>详情页</title>
     <link rel="stylesheet" href="./css/common.css">
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/details.css">
@@ -21,6 +21,55 @@
      <div id="headerNav-wrap"></div>
       <!-- headerNav end -->
 
+     <div id="drug-details">
+         <div class="details-wrap">
+             <dl class="pic-show">
+                 <dt>
+                     <div class="smallpic">
+                         <img src="https://p1.maiyaole.com/img/item/202004/29/380_20200429184119743.jpg" alt="">
+                     </div>
+                     
+                     <div class="scalepic"></div>
+                 </dt>
+                 <dd>
+                    <div class="minpics">
+                            
+                            <ul>
+                                <span class="left-arrow">&lt;</span>
+                                <li><img src="https://p2.maiyaole.com/img/item/202004/29/100_20200429184119743.jpg
+                                    " alt=""> </li>
+                                <li><img src="https://p2.maiyaole.com/img/item/202004/29/100_20200429184119743.jpg
+                                    " alt=""></li>
+                                <li><img src="https://p2.maiyaole.com/img/item/202004/29/100_20200429184119743.jpg
+                                    " alt=""></li>
+                                <li><img src="https://p2.maiyaole.com/img/item/202004/29/100_20200429184119743.jpg
+                                    " alt=""></li>
+                                <li><img src="https://p2.maiyaole.com/img/item/202004/29/100_20200429184119743.jpg
+                                    " alt=""></li>
+                               <span class="right-arrow">&gt;</span>
+                            </ul>
+                        
+                    </div>
+                 </dd>
+             </dl>
+             <dl class="details-info">
+                 <dt>
+                     <h4>天然维生素E软胶囊</h4>
+                     <p>药网价：<em>39.90</em></p>
+                 </dt>
+                 <dd>
+                     <div class="count">
+                         <label for="">数量:</label><input type="text"> <div class="operator"><span class="minus"></span><span class="add"></span></div>
+
+                     </div>
+                     <div class="cart">
+                         <span></span><input type="button" value="加入购物车" class="add-cart">
+                     </div>
+                 </dd>
+             </dl>
+         </div>
+     </div>
+
     <!-- page footer begin-->
     <div id="page-footer"></div>
     <!-- page footer end -->
@@ -33,7 +82,30 @@
 <script>
     $('#header').load('./commonH/comm-header.html');
     $('#search').load('./commonH/comm-search.html');
-    $('#headerNav-wrap').load('./commonH/comm-nav.html');
+    $('#headerNav-wrap').load('./commonH/comm-nav.html', function (responseTxt, statusTxt) {
+        if (statusTxt == 'success') {
+            const $display = $('#headerNav .sort-display');
+            const $ul = $display.find('ul');
+            console.log($display);
+            $display.hover(function () {
+                console.log('hhhhh');
+                //鼠标进入
+                $ul.show();
+                $ul.children().on('mouseover',function(){
+                    $(this).find('.sortList').show();
+                });
+                $ul.children().on('mouseout',function(){
+                    $(this).find('.sortList').hide();
+                });
+
+            }, function () {
+                //鼠标离开
+                $ul.hide();
+            }
+        )}
+    }
+    
+    );
     $('#page-footer').load('./commonH/comm-footer.html')
     $('#right-bar').load('./commonH/comm-rightbar.html')
 

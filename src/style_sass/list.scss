@@ -23,4 +23,65 @@
         }
     }
 }
+#druglist-wrap{
+    width: 1190px;
+    margin: 0 auto;
+    .sortOrder{
+        margin-left: 170px;
+        margin-top: 10px;
+        border: 1px solid  rgb(214, 205, 205);
+        display: flex;
+        background-color:rgb(214, 205, 205) ;
+        .sort-title{
+           display: flex;
+           li{
+              
+                height: 30px;
+                line-height: 30px;
+                font-size: 14px;
+                margin-right: 1px;
+                text-align: center;
+                a{
+                    padding: 0 10px;
+                }
+           }
+           .selected{
+               color: red;
+           }
+        }
+    }
+    .list-detail{
+        display: flex;
+        flex-wrap: wrap;
+        margin:20px 0 20px 170px; 
+       
+        justify-content: space-between;
+        li{
+            width: 200px;
+            height: 300px;
+            padding: 7px 14px 10px 14px;
+            border: 3px solid transparent;
+            &:hover{
+               border:3px solid rgb(228, 219, 219);
+            } 
+        }
+        dl{
+            display: flex;
+            flex-direction: column;
+            dt{
+                margin-bottom: 10px;
+            }
+            dd{
+                span{
+                    padding:10px;
+                    color:red;
+                }
+                p{
+                    padding:10px;
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+}
 @import './pagefooter';
