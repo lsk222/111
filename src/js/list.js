@@ -18,7 +18,7 @@
             <li>
                 <dl>
                     <dt>
-                        <a href="details.html?picid=${value.id}"><img class="lazy" data-original="${value.picurl}" width="200" height="200" alt=""></a>
+                        <a href="details.html?picid=${value.id}"><img class="lazy" data-original="${value.picurl}" width="200px" height="200px"   alt=""></a>
                     </dt>
                     <dd>
                         <span class='price'>￥${value.price}</span>
@@ -31,7 +31,7 @@
         $listdetail.append($strhtml);
         //添加懒加载,添加到渲染的列表下面
         $(function() {
-            $("img .lazy").lazyload({ effect: "fadeIn" });
+            $("img.lazy").lazyload({ effect: "fadeIn" });
         });
 
         array_default = []; //排序前的li数组
@@ -65,14 +65,16 @@
                 },
                 dataType: 'json'
             }).done(function(data) {
-                let d=JSON.parse(data);
+                console.log( typeof data);
+                // let d=JSON.parse(data);
+                console.log(data);
                 let $strhtml = ``;
-                $.each(d, function(index, value) {
+                $.each(data, function(index, value) {
                     $strhtml += `
                     <li>
                         <dl>
                             <dt>
-                                <a href="details.html?picid=${value.id}" target="_blank""><img class="lazy" data-original="${value.picurl}" width="200" height="200" alt=""></a>
+                                <a href="details.html?picid=${value.id}" target="_blank""><img class="lazy" data-original="${value.picurl}" width="200" height="200" alt="" ></a>
                             </dt>
                             <dd>
                                 <span class="price">￥${value.price}</span>
@@ -83,6 +85,9 @@
                 });
                
                 $listdetail.html($strhtml);
+                $(function() {
+                    $("img.lazy").lazyload({ effect: "fadeIn" });
+                });
                 //重新赋值
                 array_default = []; //排序前的li数组
                 array = []; //排序中的数组

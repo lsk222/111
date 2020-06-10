@@ -76,10 +76,10 @@ h2{
     float: right;
     margin-top: 12px;
     height: 26px;
-    display: none;
+    
     background: url(../img/regest.png) no-repeat right -58px;
 }
-.t-true,.p-true{
+.t-true,.p-true,.c-true{
     padding-right: 30px;
     font-size: 12px;
     font-style: normal;
@@ -87,9 +87,15 @@ h2{
     margin-top: 5px;
     height: 26px;
     background: url(../img/regest.png) no-repeat right 7px;
-    /* display: none; */
-
+    display: none;
 }
+.pass-reg{
+    font-size: 6px;
+  
+    color: rgb(121, 110, 110);
+}
+
+
 .xieyi{
     font-size: 12px;
     margin-bottom: 6px;

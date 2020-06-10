@@ -38,7 +38,9 @@
               .smallpic{
                   width: 298px;
                   height: 298px;
-                  cursor: crosshair;
+                  border: 1px solid rgb(117, 106, 106);
+                //   cursor: crosshair;
+                 
                   img{
                       width: 100%;
                       height: 100%;
@@ -47,19 +49,23 @@
               .scalepic{
                   position: absolute;
                   left: 300px;
+                  border: 1px solid rgb(229, 179, 179);
                   top: 0;
-                   width:380px ;
-                   height: 380px;
-                   background-color: pink;
+                   width:300px ;
+                   height: 300px;
+                   overflow: hidden;
+                   display:none;
+                //    background-color: rgb(182, 174, 175);
+                //    z-index:99;
               }
               .smallM{
                   position: absolute;
                   top:0;
                   left: 0;
-                  background-color: red;
-                  width: 141px;
-                  height: 141px;
-                  opacity: .5;
+                  background-color: rgb(99, 50, 50);
+                  width: 150px;
+                  height: 150px;
+                  opacity: .3;
               }
           }
 
@@ -78,10 +84,13 @@
              .minpics{
                 width: 241px;
                 overflow: hidden;
-                 
+                position: relative;
              }
            
               ul{
+                  position: absolute;
+                  left: 0;
+                  
                   width: 300px;
                   overflow: hidden;
                   margin-top: 10px;

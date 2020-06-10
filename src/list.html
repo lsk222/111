@@ -64,7 +64,7 @@
         console.log('searchForm:'+$searchform)
         if(statusTxt=='success'){
             $(window).on('scroll',function(){
-                console.log('searchForm');
+               
                 if(flag){
                   $searchform.css({
                       position:"fixed",
@@ -84,7 +84,7 @@
         if (statusTxt == 'success') {
             const $display = $('#headerNav .sort-display');
             const $ul = $display.find('ul');
-            console.log($display);
+           
             $display.hover(function () {
                 console.log('hhhhh');
                 //鼠标进入
@@ -102,7 +102,7 @@
             });
 
             $(window).on('scroll',function(ev){
-                console.log('1111');
+               
                 let $top=$(window).scrollTop();
                 
                 let $navTop=$('#headerNav').offset().top;
