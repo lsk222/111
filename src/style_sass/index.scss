@@ -9,3 +9,15 @@
 @import './friendLinks';
 @import './pagefooter';
 @import './elevator';
+@font-face {
+	font-family:iconfont;src:url(http://s.maiyaole.com/css/201306/iconfont.eot);src:url(http://s.maiyaole.com/css/201306/iconfont.eot?#iefix) format('embedded-opentype'),url(http://s.maiyaole.com/css/201306/iconfont.woff) format('woff'),url(//s.maiyaole.com/css/201306/iconfont.ttf) format('truetype'),url(//s.maiyaole.com/css/201306/iconfont.svg#iconfont) format('svg')
+}
+
+.iconfont {
+	font-family: iconfont!important;
+	font-size: 16px;
+	font-style: normal;
+	-webkit-font-smoothing: antialiased;
+	-webkit-text-stroke-width: none;
+	-moz-osx-font-smoothing: grayscale
+}

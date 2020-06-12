@@ -35,11 +35,14 @@
           flex-direction: column;
           dt{
               position: relative;
+              height: 298px;
+              width: 298px;
               .smallpic{
                   width: 298px;
                   height: 298px;
+                  position: absolute;
                   border: 1px solid rgb(117, 106, 106);
-                //   cursor: crosshair;
+                   cursor: crosshair;
                  
                   img{
                       width: 100%;
@@ -47,16 +50,21 @@
                   }
               }
               .scalepic{
-                  position: absolute;
-                  left: 300px;
-                  border: 1px solid rgb(229, 179, 179);
+                  position: relative;
+                  left: 305px;
+                  border: 1px solid rgb(61, 46, 46);
                   top: 0;
-                   width:300px ;
-                   height: 300px;
+                   width:400px ;
+                   height: 400px;
                    overflow: hidden;
                    display:none;
-                //    background-color: rgb(182, 174, 175);
-                //    z-index:99;
+                   background-color: rgb(182, 174, 175);
+                   z-index:99;
+                   img{
+                       position: absolute;
+                       top: 0;
+                       left: 0;
+                   }
               }
               .smallM{
                   position: absolute;
@@ -66,11 +74,14 @@
                   width: 150px;
                   height: 150px;
                   opacity: .3;
+                  visibility: hidden;
+                 
               }
           }
 
           dd{
              display: flex;
+           
              span{
                 cursor: pointer;
                 height: 50px;

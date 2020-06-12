@@ -51,6 +51,12 @@ gulp.task('uglifyhtml', () => {
         .pipe(html()) //执行html插件包
         .pipe(gulp.dest('dist/'));
 });
+//压缩公共文件
+gulp.task('uglifyCom',()=>{
+	 return gulp.src('src/commonH/*.html')
+        .pipe(html()) //执行html插件包
+        .pipe(gulp.dest('dist/commonH'));
+})
 
 //4.压缩css文件 - 引入插件包
  gulp.task('uglifycss', () => {

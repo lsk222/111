@@ -29,7 +29,7 @@
             <table class="table">
                 <thead>
                     <tr>
-                        <th style="text-align: center;"><input type="checkbox" name="" id="">  全选</th>
+                        <th style="text-align: center;"><input type="checkbox" name="" id="" class="selectAll">  全选</th>
                         <th style="text-align: center;">商品</th>
                         <th style="text-align: center;">单价（元）</th>
                         <th style="text-align: center;"> 数量 </th>
@@ -46,14 +46,14 @@
                         <td> <span class="minus"></span><span class="shownum">3</span><span class="add"></span></td>
                         <td>3.0kg</td>
                         <td class="sum">70.0(元)</td>
-                        <td><button style="margin-right: 5px;" type="button" class="btn btn-danger">删除</button><button type="button" class="btn btn-primary">收藏</button></td>
+                        <td><button style="margin-right: 5px;" type="button" class="btn btn-danger delete">删除</button><button type="button" class="btn btn-primary">收藏</button></td>
                     </tr>
                   
                 </tbody>
                 <tfoot>
                     <tr>
-                        <td colspan="6" id='sum'> <input type="checkbox" name="" id=""> 全选 <span class="totalSum"></span></td>
-                        <td><button style="margin-right: 5px;" type="button" class="btn btn-primary">继续购物</button><button type="button" class="btn btn-danger">去结算</button></td>
+                        <td colspan="6" id='sum'> <input type="checkbox" name="" id="selectAll01"> 全选 <span class="totalSum"></span></td>
+                        <td><button style="margin-right: 5px;" type="button" class="btn btn-primary" id="deleteAll">删除全选</button><button type="button" class="btn btn-danger">去结算</button></td>
                         
                     </tr>
                     
@@ -64,6 +64,7 @@
 </body>
 </html>
 <script src='./js/jquery.js'></script>
+
 <script src="./thirdplugins/jquery.cookie.js"></script>
 <script src="./js/cart.js"></script>
 <script>

@@ -34,38 +34,54 @@
     const $smallM=$('.pic-show .smallM');
     const $smallimg=$('.smallpic img');
     const $scalebox=$('.pic-show .scalepic')
-    const $scaleimg=$scalebox.find('img');
+    let $scaleimg=$('.scalepic img');
 
     //小图部分 
     let lisize=-1;
    
     minpicsUl.on("mouseover","li",function(){
-        console.log('lilii')
+     
         let $src=$(this).find("img").attr('src');
-        console.log('list:'+$(".minpics ul").children().length);
         lisize=$(".minpics ul").children().length;
-        
+        $scaleimg=$('.scalepic img');
         $smallimg.attr({
             src:$src
         });
+        $scaleimg.attr({
+            src:$src
+        })
     });
     let $num=5;
     let $leftArrow=$('.left-arrow');
     let $rightArrow=$('.right-arrow');
     
    
-    
+    //右箭头点击 图片左移
+    $rightArrow.on('click', function() {
+        let $lists = $(".minpics ul").children();
+        if ($lists.size() > $num) { 
+            $num++;
+            $leftArrow.css('color', '#333');
+            if ($lists.size() == $num) {
+                $rightArrow.css('color', '#fff');
+            }
+            $(".minpics ul").animate({
+                left: -($num - 5) * $lists.eq(0).outerWidth(true)
+            });
+        }
+    });
+    // 点击左箭头 图片右移
     $leftArrow.on('click', function() {
         let $lists = $(".minpics ul").children();
         //限制点击的条件
-        if($lists.length>$num){
+        if($num>5){
             $num--;
             $rightArrow.css('color', '#333');
             if ($lists.length<=$num) {
                 $leftArrow.css('color', '#fff');
             }
             $(".minpics ul").animate({
-                left:($num-5) * $lists.eq(0).outerWidth(true)
+                left:-($num-5) * $lists.eq(0).outerWidth(true)
             });
         }
     });
@@ -109,25 +125,49 @@
 
     //放大镜效果
    
-    console.log($smallimg.width());
-    let size=$smallimg.width()*2;
-    console.log('size:'+size);
-    console.log("xiaotu"+$smallimg.width()*2);
-    $scaleimg.width(size);
-    $scaleimg.height(size);
-    $smallpic.hover(function(){
-        $smallpic.on('mousemove',function(event){
+   
+    
+    let scale=$('.scalepic').width()/$smallM.width()
+    let size=$smallimg.width()*scale;
+    
+   
+    $scaleimg.width( parseInt(size));
+    $scaleimg.height( parseInt(size));
+    $('.pic-show dt').hover(function(){
+        $(this).on('mousemove',function(event){
             var e=event||window.event;
             let $topValue= e.pageY-$smallpic.offset().top-$smallM.width()/2;
             let $leftValue=e.pageX-$smallpic.offset().left-$smallM.height()/2;
-            console.log("top:"+$topValue);
-            console.log("leftvalue:"+$leftValue);
+            
+            if($leftValue<=0){
+                $leftValue=0;
+            }else if($leftValue>$(this).width()-$smallM.width()){
+                $leftValue=$(this).width()-$smallM.width()
+            }
+
+            if($topValue<0){
+                $topValue=0;
+            }else if($topValue>=$(this).height()-$smallM.height()){
+                $topValue=$(this).height()-$smallM.height();
+            }
+            
             $smallM.css({
+                visibility: "visible",
                 top:$topValue,
                 left:$leftValue
+            });
+            $('.scalepic').show();
+            $scaleimg.css({
+                
+                top:-$topValue*scale,
+                left:-$leftValue*scale
             })
         });
     },function(){
+         $smallM.css({
+            visibility: "hidden"
+         })
+         $('.scalepic').hide()
 
     });
 

@@ -21,6 +21,7 @@
         <!-- 表单和背景 -->
         
         <form class="login-form">
+           
             <div class="login-tabs">
                 <span>普通登录</span>
                 <span>手机快速登录</span>
@@ -29,17 +30,20 @@
                 <h6>欢迎登录</h6>
                 <p>还不是医药网会员， <a href=""> 免费注册</a></p>
             </div>
+            <span class="tips"></span>
             <div class="login">
-                <p class="tel-wrap"><input type="text" class="tel" placeholder="手机/用户名/邮箱"><i class="t-empty">不能为空</i><i class="t-true">&nbsp;</i></p>
+                <p class="tel-wrap"><input type="text" class="tel" placeholder="手机/用户名/邮箱"><i class="t-empty">不能为空</i></p>
+              
             </div>
             <div class="login">
-                <p class="pass-wrap"><input type="text" class="password" placeholder="密码"><i class="p-empty">不能为空</i><i class="p-true">&nbsp;</i></p>
+                <p class="pass-wrap"><input type="text" class="password" placeholder="密码"><i class="p-empty">不能为空</i></p>
+                
             </div>
             <div class="login">
                 <p class="yanzheng-confirm"><input type="text" class="yanzheng" placeholder="验证码"></p>
             </div>
             <p class='auto-login'><input type="checkbox" name="" id="">两周内免登录</p>
-            <input type="submit" value="登录" class="sub">
+            <input type="button" value="登录" class="sub">
         </form>
 
         
@@ -51,6 +55,7 @@
     </div>
 </body>
 <script src="./js/jquery.js"></script>
+<script src="./js/login.js"></script>
 <script>
     $('.footer').load('./commonH/common-f.html');
 </script>

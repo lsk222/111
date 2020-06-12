@@ -3,7 +3,8 @@
   width: 100%;
   height: 36px;
   background-color: #F1F1F1;
-  font-size: 12px; }
+  font-size: 12px;
+}
 #header .header-wrap {
   width: 1190px;
   height: 36px;
@@ -12,28 +13,33 @@
   margin: 0 auto;
   /*------ 左侧menu begin-------*/
   /*------ 左侧menu begin-------*/
-  /*-------- 右侧的menu  begin------------*/ }
+  /*-------- 右侧的menu  begin------------*/
+}
 #header .header-wrap .header-left {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  /*------顶部左侧 li ------*/ }
+  /*------顶部左侧 li ------*/
+}
 #header .header-wrap .header-left span {
   padding-top: 0;
   padding-right: 0;
   padding-bottom: 0;
-  padding-left: 5px; }
+  padding-left: 5px;
+}
 #header .header-wrap .header-left .header_collect {
   padding-top: 0;
   padding-right: 10px;
   padding-bottom: 0;
   padding-left: 10px;
-  border-right: 1px solid #9e9a9a; }
+  border-right: 1px solid #9e9a9a;
+}
 #header .header-wrap .header-left .header_collect span {
   display: inline-block;
   width: 12px;
   height: 12px;
-  background: url("../img/common_sprite.png") no-repeat right -65px; }
+  background: url("../img/common_sprite.png") no-repeat right -65px;
+}
 #header .header-wrap .header-left .header_target {
   position: relative;
   line-height: 36px;
@@ -41,46 +47,56 @@
   margin-top: 0;
   margin-right: 10px;
   margin-bottom: 0;
-  margin-left: 10px; }
+  margin-left: 10px;
+}
 #header .header-wrap .header-left .header_target:hover {
   background-color: white;
-  overflow: visible; }
+  overflow: visible;
+}
 #header .header-wrap .header-left .header_target:hover ul {
   display: block;
   margin-top: -1px;
-  z-index: 99; }
+  z-index: 99;
+}
 #header .header-wrap .header-left .header_target:hover .city .city-arrow {
-  background: url("../img/common_sprite.png") no-repeat right -18px; }
+  background: url("../img/common_sprite.png") no-repeat right -18px;
+}
 #header .header-wrap .header-left .header_target .city {
   z-index: 555;
   height: 36px;
   display: flex;
   justify-content: space-around;
-  align-items: center; }
+  align-items: center;
+}
 #header .header-wrap .header-left .header_target .city .city-arrow {
   display: inline-block;
   width: 20px;
   height: 20px;
   background-color: red;
-  background: url("../img/common_sprite.png") no-repeat right 8px; }
+  background: url("../img/common_sprite.png") no-repeat right 8px;
+}
 #header .header-wrap .header-left .header_target ul {
   position: absolute;
   width: 200px;
   top: 36px;
   background-color: white;
   display: none;
-  border: 1px solid #e6dfdf; }
+  border: 1px solid #e6dfdf;
+}
 #header .header-wrap .header-left .header_target ul li {
   line-height: 28px;
-  padding-left: 10px; }
+  padding-left: 10px;
+}
 #header .header-wrap .header-right {
   display: flex;
   justify-content: flex-start;
   align-items: center;
   font-size: 12px;
-  /*-------- 右侧的menu  end------------*/ }
+  /*-------- 右侧的menu  end------------*/
+}
 #header .header-wrap .header-right em {
-  color: #9e9a9a; }
+  color: #9e9a9a;
+}
 #header .header-wrap .header-right li {
   display: flex;
   align-items: center;
@@ -89,37 +105,46 @@
   padding-top: 0;
   padding-right: 10px;
   padding-bottom: 0;
-  padding-left: 10px; }
+  padding-left: 10px;
+}
 #header .header-wrap .header-right li .h-light {
   color: #c7a774;
   font-weight: 700;
-  font-family: Tahoma; }
+  font-family: Tahoma;
+}
 #header .header-wrap .header-right li a {
   display: block;
   line-height: 36px;
   height: 36px;
-  font-size: 12px; }
+  font-size: 12px;
+}
 #header .header-wrap .header-right li .active {
   color: red;
   padding-top: 0;
   padding-right: 5px;
   padding-bottom: 0;
-  padding-left: 5px; }
+  padding-left: 5px;
+}
 #header .header-wrap .header-right li a:not(.active):hover {
-  color: #3c3cc9; }
+  color: #3c3cc9;
+}
 #header .header-wrap .header-right .phone_app {
-  position: relative; }
+  position: relative;
+}
 #header .header-wrap .header-right .phone_app span {
   display: block;
   width: 12px;
   height: 14px;
   background: url("../img/common_sprite.png") no-repeat right -112px;
-  margin-right: 2px; }
+  margin-right: 2px;
+}
 #header .header-wrap .header-right .phone_app:hover {
-  background-color: white; }
+  background-color: white;
+}
 #header .header-wrap .header-right .phone_app:hover dl {
   display: block;
-  margin-right: -1px; }
+  margin-right: -1px;
+}
 #header .header-wrap .header-right .phone_app dl {
   position: absolute;
   display: none;
@@ -134,26 +159,32 @@
   padding-top: 0;
   padding-right: 0;
   padding-bottom: 0;
-  padding-left: 10px; }
+  padding-left: 10px;
+}
 #header .header-wrap .header-right .phone_app dl dt {
   margin-top: 8px;
   float: left;
   width: 85px;
-  height: 85px; }
+  height: 85px;
+}
 #header .header-wrap .header-right .phone_app dl dt img {
   width: 100%;
-  height: 100%; }
+  height: 100%;
+}
 #header .header-wrap .header-right .phone_app dl dd {
   margin-top: 8px;
   margin-top: 8px;
   margin-right: 0;
   margin-bottom: 0;
   margin-left: 10px;
-  float: left; }
+  float: left;
+}
 #header .header-wrap .header-right .phone_app dl dd .app {
-  line-height: 30px; }
+  line-height: 30px;
+}
 #header .header-wrap .header-right .phone_app dl dd .active {
-  color: red; }
+  color: red;
+}
 
 #logo {
   width: 1190px;
@@ -161,46 +192,56 @@
   margin: 0 auto;
   display: flex;
   align-items: center;
-  justify-content: space-between; }
+  justify-content: space-between;
+}
 #logo ol {
-  display: flex; }
+  display: flex;
+}
 #logo ol li {
   height: 32px;
   width: 172px;
-  background-color: #F3F3F3; }
+  background-color: #F3F3F3;
+}
 #logo ol li span {
   display: block;
   width: 150px;
   height: 32px;
   line-height: 32px;
   text-align: center;
-  font-size: 14px; }
+  font-size: 14px;
+}
 #logo ol .first {
   background: url("../img/followstep.png") no-repeat right top;
-  background-color: #0083ce; }
+  background-color: #0083ce;
+}
 #logo ol .second {
   background: url("../img/followstep.png") no-repeat right top;
-  background-color: #F3F3F3; }
+  background-color: #F3F3F3;
+}
 
 #cart {
   width: 1190px;
-  margin: 0 auto; }
+  margin: 0 auto;
+}
 
 tbody tr td {
-  text-align: center; }
+  text-align: center;
+}
 tbody tr td img {
   width: 100%;
-  height: 100%; }
+  height: 100%;
+}
 tbody tr td .minus {
   display: inline-block;
   font-size: 14px;
   cursor: pointer;
   width: 20px;
   height: 22px;
-  background: url("../img/common_sprite.png") no-repeat -158px 8px;
+  background: url("../img/icon_cart.png") no-repeat left 0;
   border: 1px solid #aca6a6;
   margin: 1px;
-  margin-bottom: -6px; }
+  margin-bottom: -6px;
+}
 tbody tr td .add {
   font-size: 14px;
   display: inline-block;
@@ -210,7 +251,8 @@ tbody tr td .add {
   cursor: pointer;
   margin: 1px;
   margin-bottom: -6px;
-  background: url("../img/common_sprite.png") no-repeat -158px -17px; }
+  background: url("../img/icon_cart.png") no-repeat left -27px;
+}
 tbody tr td .shownum {
   font-size: 14px;
   display: inline-block;
@@ -219,6 +261,7 @@ tbody tr td .shownum {
   text-align: center;
   border: 1px solid #c0b9b9;
   margin: 1px;
-  margin-top: -2px; }
+  margin-top: -2px;
+}
 
 /*# sourceMappingURL=shoppingCart.css.map */
